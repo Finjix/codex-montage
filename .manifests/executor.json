@@ -3,7 +3,7 @@
   "component": "executor",
   "root": "D:\\codex-montage\\components\\montage-three-part-orchestrator-ff",
   "file_count": 3,
-  "tree_sha256": "93e9362288ecef5a07d9ed1dd493f0efee0cc2fe37e8b402cb210a296ac24004",
+  "tree_sha256": "2d9639c67a2b5ae3ec3c53beb92a77cd73b233bd840f8dadd901eb11a1007a43",
   "required_files": [
     "SKILL.md",
     "scripts/three_suite_ff.py"
@@ -16,8 +16,8 @@
     },
     {
       "path": "scripts/three_suite_ff.py",
-      "sha256": "3fba0f36cdd2200ecfbc5cb0d24166d1c60d7b10096fab3077b2c75c196b1957",
-      "size": 13110
+      "sha256": "c81d203ba59fcee97283a9c5b7696152c6a8c2a43a7918c98362cfb2203f2745",
+      "size": 18155
     },
     {
       "path": "SKILL.md",

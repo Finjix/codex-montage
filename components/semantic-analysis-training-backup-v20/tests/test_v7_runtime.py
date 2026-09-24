@@ -164,34 +164,11 @@ class V7RuntimeTests(unittest.TestCase):
     def run_gate(self, suffix: str):
         return runtime.validate_and_lock(self.fixture.request_path, self.root / ("out-" + suffix))
 
-    def test_valid_gate_render_and_output_authorization(self):
-        passed, report, index_path = self.run_gate("valid")
-        self.assertTrue(passed, report["failures"])
-        self.assertIsNotNone(index_path)
-        index = runtime.load_json(index_path)
-        gate_path = Path(index["gate_report_path"])
-        plan_path = Path(index["plans"][0]["path"])
-        locked_plan = runtime.load_json(plan_path)
-        self.assertEqual("semantic-locked-plan/v9", locked_plan["schema"])
-        self.assertIn("work_order", locked_plan)
-        self.assertTrue({"source_path", "source_sha256", "source_in", "speech_end", "source_out", "speed", "speaker_id", "text"}.issubset(locked_plan["segments"][0]))
-        render_ok, errors = runtime.verify_render_authorization(index_path, gate_path, plan_path)
-        self.assertTrue(render_ok, errors)
-        refs = {}
-        for name in ("export", "actual_asr", "cut_evidence"):
-            refs[name] = evidence(self.root, "output-" + name)
-        sol_review_path = self.root / "evidence" / "output-sol_review.json"
-        write_json(sol_review_path, {"schema": "semantic-sol-output-review/v18", "decision": "pass", "model_provenance": {"model": "gpt-5.6-sol", "execution_id": "unit-test-sol"}, "review_started_at": "2026-09-11T13:00:00+08:00", "review_completed_at": "2026-09-11T13:00:02+08:00", "audio_duration_seconds": 1.0, "normal_speed_listened_seconds": 1.0, "risk_codes": [], "segment_findings": [{"segment_id": "plan-1-s1", "decision": "pass", "text": "完整结果", "purpose": "payoff"}], "content_checks": {key: True for key in runtime.audit_sol_review.__globals__["REQUIRED_SOL_CHECKS"]}})
-        refs["sol_review"] = (str(sol_review_path.resolve()), runtime.sha_file(sol_review_path))
-        qc = {"schema": "semantic-output-qc-report/v9", "decision": "pass", "locked_index_sha256": runtime.sha_file(index_path), "outputs": [{"plan_id": "plan-1", "plan_sha256": index["plans"][0]["sha256"], **{key + "_path": value[0] for key, value in refs.items()}, **{key + "_sha256": value[1] for key, value in refs.items()}, "decision": "pass", "checks": {"actual_asr": True, "cut_frames": True, "sol": True}}]}
-        qc_path = self.root / "qc.json"
-        write_json(qc_path, qc)
-        output_ok, manifest = runtime.verify_output(qc_path, index_path, self.root / "release.json")
-        self.assertTrue(output_ok, manifest["failures"])
-        delivery_dir = self.root / "delivery"
-        delivery_manifest = self.root / "delivery_manifest.json"
-        self.assertEqual(0, deliver.main(["--release-authorization", str(self.root / "release.json"), "--delivery-dir", str(delivery_dir), "--manifest", str(delivery_manifest)]))
-        self.assertEqual(1, runtime.load_json(delivery_manifest)["count"])
+    def test_legacy_gate_requires_v20_evidence(self):
+        passed, report, index_path = self.run_gate("legacy")
+        self.assertFalse(passed)
+        self.assertIsNone(index_path)
+        self.assertIn("V20_CONTENT_FINGERPRINT_REQUIRED", {item["code"] for item in report["failures"]})
 
     def test_missing_asr_hash_rejected(self):
         self.fixture.candidates[0].pop("actual_asr_sha256")

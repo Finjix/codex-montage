@@ -7,7 +7,12 @@ from pathlib import Path
 
 def now(): return datetime.now().astimezone().isoformat(timespec="seconds")
 def read(path): return json.loads(Path(path).read_text(encoding="utf-8-sig"))
-def sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def sha(path):
+    digest=hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda:stream.read(8*1024*1024),b""):
+            digest.update(block)
+    return digest.hexdigest()
 def atomic(path,value):
     path=Path(path); path.parent.mkdir(parents=True,exist_ok=True); temp=path.with_suffix(path.suffix+".tmp"); temp.write_text(json.dumps(value,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); os.replace(temp,path)
 def run(command,allowed={0}):
@@ -26,6 +31,10 @@ def root(explicit):
 def components(suite):
     registry=read(suite/"suite_registry.json"); return {name:{**value,"root":suite/value["relative_path"],"manifest":suite/value["manifest_relative_path"]} for name,value in registry["components"].items()}
 def verify(suite):
+    verifier=suite/"tools"/"build_ff_suite.py"
+    if not verifier.is_file(): raise RuntimeError("suite hash verifier missing")
+    result=run([sys.executable,str(verifier),"verify"])
+    if json.loads(result.stdout).get("ok") is not True: raise RuntimeError("suite hash verification failed")
     c=components(suite); registry=read(suite/"suite_registry.json")
     if registry.get("render_mode")!="source_frame_ranges/v1" or registry.get("seconds_only_fallback") is not False: raise RuntimeError("suite is not frame-native")
     required=[c["semantic"]["root"]/"SKILL.md",c["semantic"]["root"]/c["semantic"]["interface"]["gate_runtime"],c["semantic"]["root"]/c["semantic"]["interface"]["frame_plan_gate"],c["semantic"]["root"]/c["semantic"]["interface"]["portable_renderer"],c["semantic"]["root"]/c["semantic"]["interface"]["frame_range_repair"],c["semantic"]["root"]/c["semantic"]["interface"]["winky_ledger"],c["controller"]["root"]/"SKILL.md",c["controller"]["root"]/c["controller"]["interface"]["controller"],c["executor"]["root"]/"SKILL.md"]
@@ -34,6 +43,27 @@ def verify(suite):
     for item in c.values():
         if not item["manifest"].is_file() or sha(item["manifest"])!=item["manifest_sha256"]: raise RuntimeError(f"stale manifest: {item['root']}")
     return c
+def require_reference(item,label):
+    if not isinstance(item,dict) or not item.get("path") or not item.get("sha256"): raise RuntimeError(f"{label} reference missing")
+    path=Path(item["path"]).resolve()
+    if not path.is_file() or sha(path)!=item["sha256"]: raise RuntimeError(f"{label} reference changed")
+    return path
+def require_argument(path,item,label):
+    actual=Path(path).resolve(); expected=require_reference(item,label)
+    if actual!=expected: raise RuntimeError(f"{label} does not match the previous stage")
+    return expected
+def clear_after(value,stage,job):
+    keys={
+        "semantic":("semantic_prelock_recheck","semantic_completion","controller_preflight","delivery_manifest","controller_validation","completion"),
+        "preflight":("delivery_manifest","controller_validation","completion"),
+        "finalize":("controller_validation","completion"),
+        "validate":("completion",),
+    }
+    if value.get("completion"):
+        (job/"three_suite_ff_completion.json").unlink(missing_ok=True)
+    for key in keys[stage]: value.pop(key,None)
+    if stage=="semantic": value["controller_invocations"]=[]
+    if stage=="preflight": value["controller_invocations"]=[]
 def state(job): return read(job/"three_suite_ff_state.json")
 def save(job,value,phase,summary): value["phase"]=phase; value.setdefault("events",[]).append({"at":now(),"phase":phase,"summary":summary}); atomic(job/"three_suite_ff_state.json",value)
 
@@ -66,8 +96,9 @@ def main():
         value={"schema":"mandatory-three-suite-ff-state/v20","created_at":now(),"authorization":a.authorization,"source_root":str(a.source_root.resolve()),"output_root":str(a.output_root.resolve()),"expected_indexes":sorted(set(indexes)),"components":{k:{**{x:y for x,y in v.items() if x not in ("root","manifest")},"root":str(v["root"]),"manifest":str(v["manifest"])} for k,v in c.items()},"semantic_invocations":[],"controller_invocations":[],"events":[]}; save(job,value,"initialized","bound V20 semantic, FF controller and executor"); print(job/"three_suite_ff_state.json"); return
     job=a.job_dir.resolve(); value=state(job)
     if a.command=="semantic-run":
-        semantic=c["semantic"]; command=[sys.executable,str(semantic["root"]/semantic["interface"]["orchestrator"]),semantic["interface"]["run_command"],"--config",str(a.config.resolve()),"--state",str(a.semantic_state.resolve())]; result=run(command,{0,20,22}); value["semantic_invocations"].append({"at":now(),"command":command,"returncode":result.returncode}); save(job,value,"semantic_invoked",f"semantic returned {result.returncode}"); print(result.stdout); raise SystemExit(result.returncode)
+        semantic=c["semantic"]; command=[sys.executable,str(semantic["root"]/semantic["interface"]["orchestrator"]),semantic["interface"]["run_command"],"--config",str(a.config.resolve()),"--state",str(a.semantic_state.resolve())]; result=run(command,{0,20,22}); clear_after(value,"semantic",job); value["semantic_invocations"].append({"at":now(),"command":command,"returncode":result.returncode}); save(job,value,"semantic_invoked",f"semantic returned {result.returncode}"); print(result.stdout); raise SystemExit(result.returncode)
     if a.command=="semantic-complete":
+        if not value.get("semantic_invocations") or value["semantic_invocations"][-1]["returncode"]!=0: raise RuntimeError("successful semantic run required")
         manifest=read(a.manifest); expected=c["semantic"]["interface"]["completion_schema"]
         if manifest.get("schema")!=expected: raise RuntimeError("semantic completion schema mismatch")
         authorized=manifest.get("authorized_outputs") if isinstance(manifest.get("authorized_outputs"),list) else []
@@ -87,21 +118,46 @@ def main():
         run([sys.executable,str(fail_closed_script),"audit-request","--request",str(bound["batch_lock_request.json"]),"--registry",str(packaged_registry),"--output",str(recheck)])
         recheck_value=read(recheck)
         if recheck_value.get("schema")!="v20-fail-closed-prelock-report/v3" or recheck_value.get("decision")!="pass": raise RuntimeError("independent packaged prelock recheck failed")
+        clear_after(value,"semantic",job)
         value["semantic_prelock_recheck"]={"path":str(recheck.resolve()),"sha256":sha(recheck)}
         value["semantic_completion"]={"path":str(a.manifest.resolve()),"sha256":sha(a.manifest)}; save(job,value,"semantic_completed","V20 semantic receipt verified"); return
     controller=c["controller"]; script=controller["root"]/controller["interface"]["controller"]
     if a.command=="controller-preflight":
-        if "semantic_completion" not in value: raise RuntimeError("semantic completion required")
-        run([sys.executable,str(script),"preflight","--output",str(a.report.resolve())]); value["controller_preflight"]={"path":str(a.report.resolve()),"sha256":sha(a.report)}; save(job,value,"controller_preflight","FF controller preflight passed"); return
+        require_reference(value.get("semantic_completion"),"semantic completion")
+        run([sys.executable,str(script),"preflight","--output",str(a.report.resolve())]); clear_after(value,"preflight",job); value["controller_preflight"]={"path":str(a.report.resolve()),"sha256":sha(a.report)}; save(job,value,"controller_preflight","FF controller preflight passed"); return
     if a.command=="controller-finalize":
-        if "controller_preflight" not in value: raise RuntimeError("controller preflight required")
-        command=[sys.executable,str(script),"finalize","--premaster-manifest",str(a.premaster_manifest.resolve()),"--semantic-release",str(a.semantic_release.resolve()),"--output-dir",str(a.output_dir.resolve()),"--manifest",str(a.manifest.resolve())]; run(command); value["controller_invocations"].append({"at":now(),"command":command}); value["delivery_manifest"]={"path":str(a.manifest.resolve()),"sha256":sha(a.manifest)}; save(job,value,"controller_outputs","FF exact-60 outputs completed"); return
+        require_reference(value.get("controller_preflight"),"controller preflight")
+        require_argument(a.semantic_release,value.get("semantic_completion"),"semantic release")
+        command=[sys.executable,str(script),"finalize","--premaster-manifest",str(a.premaster_manifest.resolve()),"--semantic-release",str(a.semantic_release.resolve()),"--output-dir",str(a.output_dir.resolve()),"--manifest",str(a.manifest.resolve())]; run(command); clear_after(value,"finalize",job); value["controller_invocations"].append({"at":now(),"command":command}); value["delivery_manifest"]={"path":str(a.manifest.resolve()),"sha256":sha(a.manifest)}; save(job,value,"controller_outputs","FF exact-60 outputs completed"); return
     if a.command=="controller-validate":
+        delivery_path=require_argument(a.manifest,value.get("delivery_manifest"),"delivery manifest")
+        semantic_path=require_argument(a.semantic_release,value.get("semantic_completion"),"semantic release")
+        require_reference(value.get("controller_preflight"),"controller preflight")
+        delivery=read(delivery_path)
+        if Path(delivery.get("semantic_release_path","")).resolve()!=semantic_path or delivery.get("semantic_release_sha256")!=value["semantic_completion"]["sha256"]: raise RuntimeError("delivery manifest semantic release mismatch")
         command=[sys.executable,str(script),"validate","--manifest",str(a.manifest.resolve()),"--semantic-release",str(a.semantic_release.resolve()),"--post-qc",str(a.post_qc.resolve()),"--opening-family-report",str(a.opening_family_report.resolve()),"--report",str(a.report.resolve())]; run(command); report=read(a.report)
-        if report.get("decision")!="pass": raise RuntimeError("controller validation rejected")
+        if report.get("decision")!="pass" or Path(report.get("manifest_path","")).resolve()!=delivery_path or report.get("manifest_sha256")!=value["delivery_manifest"]["sha256"]: raise RuntimeError("controller validation rejected or unbound")
+        clear_after(value,"validate",job)
         value["controller_validation"]={"path":str(a.report.resolve()),"sha256":sha(a.report),"post_qc":str(a.post_qc.resolve()),"post_qc_sha256":sha(a.post_qc),"opening_family_report":str(a.opening_family_report.resolve()),"opening_family_report_sha256":sha(a.opening_family_report)}; save(job,value,"controller_validated","post-encode, opening-family and technical QC passed"); return
     if a.command=="complete":
-        if not all(k in value for k in ("semantic_completion","controller_preflight","delivery_manifest","controller_validation")) or not value.get("controller_invocations"): raise RuntimeError("mandatory receipts incomplete")
+        if not value.get("controller_invocations"): raise RuntimeError("controller invocation missing")
+        for key in ("semantic_prelock_recheck","semantic_completion","controller_preflight","delivery_manifest","controller_validation"):
+            require_reference(value.get(key),key)
+        delivery=read(value["delivery_manifest"]["path"]); validation=read(value["controller_validation"]["path"]); semantic=read(value["semantic_completion"]["path"])
+        if delivery.get("schema")!="ffmpeg-controller-delivery/v20" or Path(delivery.get("semantic_release_path","")).resolve()!=Path(value["semantic_completion"]["path"]).resolve() or delivery.get("semantic_release_sha256")!=value["semantic_completion"]["sha256"]: raise RuntimeError("delivery is not bound to semantic completion")
+        if validation.get("schema")!="ffmpeg-controller-validation/v20" or validation.get("decision")!="pass" or Path(validation.get("manifest_path","")).resolve()!=Path(value["delivery_manifest"]["path"]).resolve() or validation.get("manifest_sha256")!=value["delivery_manifest"]["sha256"]: raise RuntimeError("validation is not bound to delivery")
+        for name in ("post_qc","opening_family_report"):
+            path=Path(value["controller_validation"].get(name,""))
+            if not path.is_file() or sha(path)!=value["controller_validation"].get(name+"_sha256"): raise RuntimeError(f"{name} changed")
+            if read(path).get("delivery_manifest_sha256")!=value["delivery_manifest"]["sha256"]: raise RuntimeError(f"{name} delivery binding mismatch")
+        if Path(validation.get("opening_visual_family_report_path","")).resolve()!=Path(value["controller_validation"]["opening_family_report"]).resolve() or validation.get("opening_visual_family_report_sha256")!=value["controller_validation"]["opening_family_report_sha256"]: raise RuntimeError("opening family report mismatch")
+        for name,item in semantic.get("evidence",{}).items():
+            require_reference(item,f"semantic evidence {name}")
+        results=delivery.get("results",[]); authorized=semantic.get("authorized_outputs",[])
+        if len(results)!=len(value.get("expected_indexes",[])) or sorted(item.get("plan_id") for item in results)!=sorted(authorized): raise RuntimeError("delivery scope mismatch")
+        for item in results:
+            path=Path(item.get("output_path", ""))
+            if not path.is_file() or sha(path)!=item.get("output_sha256"): raise RuntimeError(f"delivered output changed: {item.get('plan_id')}")
         receipt={"schema":"mandatory-three-suite-ff-completion/v20","completed_at":now(),"semantic":value["semantic_completion"],"controller_preflight":value["controller_preflight"],"delivery_manifest":value["delivery_manifest"],"controller_validation":value["controller_validation"],"components":value["components"]}; atomic(job/"three_suite_ff_completion.json",receipt); value["completion"]={"path":str(job/"three_suite_ff_completion.json"),"sha256":sha(job/"three_suite_ff_completion.json")}; save(job,value,"complete","V20 semantic plus FF final receipts complete"); print(value["completion"]["path"]); return
     print(json.dumps(value,ensure_ascii=False,indent=2))
 

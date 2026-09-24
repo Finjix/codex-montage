@@ -20,8 +20,9 @@ def run(name,command,expected={0}):
 
 
 checks=[]
-checks.append(run("v20_semantic_regressions",[PYTHON,"-m","unittest","discover","-s",str(V20/"tests"),"-p","test_v20*.py","-v"]))
+checks.append(run("semantic_regressions",[PYTHON,"-m","unittest","discover","-s",str(V20/"tests"),"-p","test_*.py","-v"]))
 checks.append(run("ff_controller_regressions",[PYTHON,"-m","unittest","discover","-s",str(CONTROLLER/"tests"),"-p","test_*.py","-v"]))
+checks.append(run("release_integrity_regressions",[PYTHON,"-m","unittest","discover","-s",str(ROOT/"tools"),"-p","test_release_integrity.py","-v"]))
 validator=ROOT/"tools"/"validate_skill.py"
 for name,path in (("semantic_skill",V20),("controller_skill",CONTROLLER),("executor_skill",EXECUTOR)):
  checks.append(run(name,[PYTHON,"-X","utf8",str(validator),str(path)]))

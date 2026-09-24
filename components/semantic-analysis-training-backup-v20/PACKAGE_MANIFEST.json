@@ -411,8 +411,8 @@
     },
     {
       "path": "scripts/v9_source_asr.py",
-      "sha256": "EC88C110972DB3045E727D91280020700244A2D18527427E260A9630C144406F",
-      "bytes": 8254
+      "sha256": "9E20024D305098E8D217B008AD2FAEFC851298BF4D71A05A0F8D78E002F59BD9",
+      "bytes": 8369
     },
     {
       "path": "scripts/validate_package.py",
@@ -426,8 +426,8 @@
     },
     {
       "path": "tests/test_v11_live_action_gate.py",
-      "sha256": "56BCE95CE7FF998AD725A4AE566459F925235D4997FDA47A257863A7C2A8E440",
-      "bytes": 10819
+      "sha256": "DCFF6C451A7F87B97327506E5A5EC9F157FD02B435062F9E984EF3876B15635F",
+      "bytes": 11124
     },
     {
       "path": "tests/test_v12_foreground_watchdog.py",
@@ -506,8 +506,8 @@
     },
     {
       "path": "tests/test_v7_runtime.py",
-      "sha256": "B060B3EDA8927B182BBF10524456BDCE00D9C06B0227998A342584834C4CC124",
-      "bytes": 17497
+      "sha256": "AECCC6048747B94D8BA0D37245F0CD756F7AE10B13AAE68F17C8AFCA1D55ED6F",
+      "bytes": 15260
     },
     {
       "path": "tests/test_v8_orchestrator.py",

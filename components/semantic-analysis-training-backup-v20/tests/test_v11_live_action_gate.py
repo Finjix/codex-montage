@@ -153,10 +153,11 @@ class V11LiveActionGateTests(unittest.TestCase):
         output = self.root / suffix
         return runtime.validate_and_lock(self.fixture.request_path, output)
 
-    def test_witness_partial_single_star_and_same_person_pass(self):
+    def test_witness_partial_single_star_and_same_person_requires_v20_evidence(self):
         self.enable_live_action_profile(same_person=True)
         passed, report, _ = self.run_gate("pass")
-        self.assertTrue(passed, report["failures"])
+        self.assertFalse(passed)
+        self.assertIn("V20_CONTENT_FINGERPRINT_REQUIRED", {item["code"] for item in report["failures"]})
 
     def test_same_person_without_visual_change_rejected(self):
         self.enable_live_action_profile(same_person=True)
@@ -188,10 +189,11 @@ class V11LiveActionGateTests(unittest.TestCase):
         self.assertFalse(passed)
         self.assertIn("INVALID_SEMANTIC_RELATION", {item["code"] for item in report["failures"]})
 
-    def test_complete_short_reaction_passes(self):
+    def test_complete_short_reaction_requires_v20_evidence(self):
         self.enable_live_action_profile(short_reaction=True)
         passed, report, _ = self.run_gate("short-reaction")
-        self.assertTrue(passed, report["failures"])
+        self.assertFalse(passed)
+        self.assertIn("V20_CONTENT_FINGERPRINT_REQUIRED", {item["code"] for item in report["failures"]})
 
     def test_speaker_return_requires_reason(self):
         candidate = self.fixture.candidates[2]
@@ -204,7 +206,7 @@ class V11LiveActionGateTests(unittest.TestCase):
         self.assertFalse(passed)
         self.assertIn("UNJUSTIFIED_SPEAKER_RETURN", {item["code"] for item in report["failures"]})
 
-    def test_speaker_return_with_payoff_reason_passes(self):
+    def test_speaker_return_with_payoff_reason_requires_v20_evidence(self):
         candidate = self.fixture.candidates[2]
         candidate["primary_person_id"] = "person:alpha"
         candidate["visible_person_ids"] = ["person:alpha"]
@@ -214,7 +216,8 @@ class V11LiveActionGateTests(unittest.TestCase):
         self.fixture.plan["transitions"][1]["speaker_return_reason"] = "payoff"
         self.fixture.refresh()
         passed, report, _ = self.run_gate("return-pass")
-        self.assertTrue(passed, report["failures"])
+        self.assertFalse(passed)
+        self.assertIn("V20_CONTENT_FINGERPRINT_REQUIRED", {item["code"] for item in report["failures"]})
 
 
 if __name__ == "__main__":

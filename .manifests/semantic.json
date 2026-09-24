@@ -3,7 +3,7 @@
   "component": "semantic",
   "root": "D:\\codex-montage\\components\\semantic-analysis-training-backup-v20",
   "file_count": 103,
-  "tree_sha256": "e7b94fcba02f77c60560f3977090edad1739062fa57974274981f8c0092f08b3",
+  "tree_sha256": "16f4d4088b333d7f2cfe841e1ade89eb5865afef2f600a921f1dded2c8bf8d27",
   "required_files": [
     "SKILL.md",
     "capability.json",
@@ -51,7 +51,7 @@
     },
     {
       "path": "PACKAGE_MANIFEST.json",
-      "sha256": "399629c80ab646b4eb730e42470541c61f608c67c77157d223e515888a9fa8d7",
+      "sha256": "7f8cd0124f7104eb68c8aa16ddf1c20a9ae668f17dafd559c5dab166b6fb2d2f",
       "size": 18954
     },
     {
@@ -436,8 +436,8 @@
     },
     {
       "path": "scripts/v9_source_asr.py",
-      "sha256": "ec88c110972db3045e727d91280020700244a2d18527427e260a9630c144406f",
-      "size": 8254
+      "sha256": "9e20024d305098e8d217b008ad2faefc851298bf4d71a05a0f8d78e002f59bd9",
+      "size": 8369
     },
     {
       "path": "scripts/validate_package.py",
@@ -456,8 +456,8 @@
     },
     {
       "path": "tests/test_v11_live_action_gate.py",
-      "sha256": "56bce95ce7ff998ad725a4ae566459f925235d4997fda47a257863a7c2a8e440",
-      "size": 10819
+      "sha256": "dcff6c451a7f87b97327506e5a5ec9f157fd02b435062f9e984ef3876b15635f",
+      "size": 11124
     },
     {
       "path": "tests/test_v12_foreground_watchdog.py",
@@ -536,8 +536,8 @@
     },
     {
       "path": "tests/test_v7_runtime.py",
-      "sha256": "b060b3eda8927b182bbf10524456bdce00d9c06b0227998a342584834c4cc124",
-      "size": 17497
+      "sha256": "aeccc6048747b94d8ba0d37245f0cd756f7ae10b13aae68f17c8afca1d55ed6f",
+      "size": 15260
     },
     {
       "path": "tests/test_v8_orchestrator.py",

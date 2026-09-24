@@ -24,6 +24,7 @@ import shutil
 import subprocess
 import sys
 import traceback
+import uuid
 from datetime import datetime
 from pathlib import Path
 
@@ -58,12 +59,8 @@ def run_checked(label: str, command: list[str], show_output: bool = False) -> No
         print(result.stdout.strip())
 
 
-def create_junction(link: Path, target: Path, backup_root: Path, backup_name: str) -> None:
+def create_junction(link: Path, target: Path) -> None:
     link.parent.mkdir(parents=True, exist_ok=True)
-    if os.path.lexists(link):
-        backup_root.mkdir(parents=True, exist_ok=True)
-        stamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
-        link.rename(backup_root / f"{backup_name}.bak-{stamp}")
     result = subprocess.run(
         ["cmd.exe", "/d", "/c", "mklink", "/J", str(link), str(target)],
         capture_output=True,
@@ -73,6 +70,56 @@ def create_junction(link: Path, target: Path, backup_root: Path, backup_name: st
     )
     if result.returncode:
         raise RuntimeError(f"Cannot register Codex skill {link}: {result.stdout} {result.stderr}")
+
+
+def register_skills(target: Path, skill_root: Path, official_root: Path,
+                    backups: Path, active_path: Path, active: dict,
+                    report_path: Path, report: dict) -> None:
+    """Prepare every junction, then switch all registrations as one transaction."""
+    pending: list[Path] = []
+    changed: list[tuple[Path, Path | None]] = []
+    previous_active = active_path.read_bytes() if active_path.is_file() else None
+    try:
+        replacements = []
+        for name in SKILLS:
+            component = target / "components" / name
+            for root, prefix in ((skill_root, name), (official_root, f"official-{name}")):
+                link = root / name
+                candidate = root / f".{name}.pending-{uuid.uuid4().hex}"
+                create_junction(candidate, component)
+                pending.append(candidate)
+                if not candidate.is_junction() or candidate.resolve() != component.resolve():
+                    raise RuntimeError(f"Prepared skill junction is invalid: {candidate}")
+                replacements.append((link, candidate, prefix))
+        for link, candidate, prefix in replacements:
+            backup = None
+            if os.path.lexists(link):
+                backups.mkdir(parents=True, exist_ok=True)
+                stamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+                backup = backups / f"{prefix}.bak-{stamp}"
+                link.rename(backup)
+            changed.append((link, backup))
+            candidate.rename(link)
+            pending.remove(candidate)
+        write_json(report_path, report)
+        write_json(active_path, active)
+    except Exception:
+        if previous_active is None:
+            active_path.unlink(missing_ok=True)
+        else:
+            active_path.parent.mkdir(parents=True, exist_ok=True)
+            active_path.write_bytes(previous_active)
+        report_path.unlink(missing_ok=True)
+        for link, backup in reversed(changed):
+            if link.is_junction():
+                link.rmdir()
+            if backup is not None:
+                backup.rename(link)
+        raise
+    finally:
+        for candidate in pending:
+            if candidate.is_junction():
+                candidate.rmdir()
 
 
 def copy_filter(directory: str, names: list[str]) -> set[str]:
@@ -144,22 +191,15 @@ def main() -> None:
     skill_root = codex_home / "skills"
     official_root = user_profile / ".agents/skills"
     backups = codex_home / "skill-backups"
-    installed_skills = []
-    for name in SKILLS:
-        component = target / "components" / name
-        for root, prefix in ((skill_root, name), (official_root, f"official-{name}")):
-            link = root / name
-            create_junction(link, component, backups, prefix)
-            installed_skills.append(str(link))
-
-    write_json(codex_home / "three-part-suite-ff/active.json", {
+    installed_skills = [str(root / name) for name in SKILLS for root in (skill_root, official_root)]
+    active = {
         "schema": "three-part-suite-ff-active/v1",
         "suite_root": str(target),
         "version": VERSION,
         "render_mode": "source_frame_ranges/v1",
         "adjacent_same_source": "coalesce_monotonic_touching_or_overlapping_frame_ranges",
         "seconds_only_fallback": False,
-    })
+    }
     installed_semantic = target / "components/semantic-analysis-training-backup-v20"
     report = {
         "schema": "v20-ff-deployment-report/v1",
@@ -184,7 +224,9 @@ def main() -> None:
         "preflight_passed": True,
         "restart_codex_required": True,
     }
-    write_json(target / "artifacts/deployment-report.json", report)
+    register_skills(target, skill_root, official_root, backups,
+                    codex_home / "three-part-suite-ff/active.json", active,
+                    target / "artifacts/deployment-report.json", report)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     print("Deployment complete. Restart Codex to load the skills.")
 

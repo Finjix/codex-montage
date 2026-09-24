@@ -62,15 +62,15 @@ def cuda_runtime_available() -> bool:
 def build_model(model_name: str, model_root: Path, device: str, cpu_compute: str, gpu_compute: str):
     from faster_whisper import WhisperModel
     if device == "cpu":
-        return WhisperModel(model_name, device="cpu", compute_type=cpu_compute, download_root=str(model_root)), "cpu", cpu_compute
+        return WhisperModel(model_name, device="cpu", compute_type=cpu_compute, download_root=str(model_root), local_files_only=True), "cpu", cpu_compute
     if device == "cuda":
-        return WhisperModel(model_name, device="cuda", compute_type=gpu_compute, download_root=str(model_root)), "cuda", gpu_compute
+        return WhisperModel(model_name, device="cuda", compute_type=gpu_compute, download_root=str(model_root), local_files_only=True), "cuda", gpu_compute
     if not cuda_runtime_available():
-        return WhisperModel(model_name, device="cpu", compute_type=cpu_compute, download_root=str(model_root)), "cpu", cpu_compute
+        return WhisperModel(model_name, device="cpu", compute_type=cpu_compute, download_root=str(model_root), local_files_only=True), "cpu", cpu_compute
     try:
-        return WhisperModel(model_name, device="cuda", compute_type=gpu_compute, download_root=str(model_root)), "cuda", gpu_compute
+        return WhisperModel(model_name, device="cuda", compute_type=gpu_compute, download_root=str(model_root), local_files_only=True), "cuda", gpu_compute
     except Exception:
-        return WhisperModel(model_name, device="cpu", compute_type=cpu_compute, download_root=str(model_root)), "cpu", cpu_compute
+        return WhisperModel(model_name, device="cpu", compute_type=cpu_compute, download_root=str(model_root), local_files_only=True), "cpu", cpu_compute
 
 
 def transcribe(model, source_path: str, language: str) -> tuple[dict, object]:
