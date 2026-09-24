@@ -1,6 +1,6 @@
-# FF 三件套（V20.2.5）
+# codex-montage
 
-本仓库包含 FFmpeg 控制器、语义分析包和完整执行器。三个可安装的 Codex 技能位于 `components/`；维护脚本位于 `tools/`，中文使用文档位于 `docs/`。
+codex-montage 是 FF 三件套（V20.2.5）项目，包含 FFmpeg 控制器、语义分析包和完整执行器。三个可安装的 Codex 技能位于 `components/`；维护脚本位于 `tools/`，中文使用文档位于 `docs/`。
 
 ## 使用入口
 

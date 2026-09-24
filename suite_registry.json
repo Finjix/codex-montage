@@ -1,10 +1,10 @@
 {
   "schema": "montage-control-three-suite-ff/v20.2",
   "version": "20.2.5",
-  "created_at": "2026-09-24T19:03:56+08:00",
+  "created_at": "2026-09-24T19:13:18+08:00",
   "suite_root": "D:\\framecut",
   "runtime_lock_relative_path": "runtime-lock.json",
-  "runtime_lock_sha256": "e124e8bb1ff0846b673b81c0d7c8bc7ec33b20b9e4ff5f9d38a28a9e6ba34ba3",
+  "runtime_lock_sha256": "27f06ecd14f711e2f1798d355be05e45935b847e27f27dbcd62df7edfeef1847",
   "python_runtime": {
     "relative_path": "runtime/python",
     "version": "3.13.15",
@@ -89,5 +89,6 @@
   "adjacent_same_source": "coalesce_monotonic_touching_or_overlapping_frame_ranges",
   "seconds_only_fallback": false,
   "bypass_policy": "partial batch scope, stale invalid registry, renamed or derived rejected material without original lineage, missing current evidence, waveform-only speech start, first expected token preroll over 3 frames, undeclared or token-overlapping internal silence deletion, partial sentence, any boundary with fewer than 30 stable frames, rounded cut evidence, missing machine signal gate, missing final encoded opening-family gate, ad-hoc task-local rendering, or missing FF receipt is a hard failure",
-  "jianying_required": false
+  "jianying_required": false,
+  "project_name": "codex-montage"
 }
