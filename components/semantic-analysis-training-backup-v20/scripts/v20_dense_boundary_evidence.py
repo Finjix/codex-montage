@@ -8,7 +8,7 @@ from fractions import Fraction
 from pathlib import Path
 
 SUITE_ROOT = Path(__file__).resolve().parents[3]
-BIN = SUITE_ROOT / "components" / "ffmpeg-montage-controller" / "dependencies" / "ffmpeg" / "bin"
+BIN = SUITE_ROOT / "dependencies" / "ffmpeg" / "bin"
 FFMPEG = str(BIN / "ffmpeg.exe")
 FFPROBE = str(BIN / "ffprobe.exe")
 SAMPLE_RATE = 48000

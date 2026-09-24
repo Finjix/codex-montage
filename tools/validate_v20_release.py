@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parent.parent
 ARTIFACTS=ROOT/"artifacts"
 ARTIFACTS.mkdir(exist_ok=True)
-PYTHON=ROOT/"runtime"/"python"/"python.exe"
+PYTHON=ROOT/"dependencies"/"python"/"python.exe"
 V20=ROOT/"components"/"semantic-analysis-training-backup-v20"
 CONTROLLER=ROOT/"components"/"ffmpeg-montage-controller"
 EXECUTOR=ROOT/"components"/"montage-three-part-orchestrator-ff"
@@ -37,7 +37,7 @@ checks.append({"name":"portable_runtime_config_closed","command":[],"returncode"
 runtime_lock=ROOT/"runtime-lock.json"
 checks.append({"name":"runtime_lock_present","command":[],"returncode":0 if runtime_lock.is_file() else 2,"passed":runtime_lock.is_file(),"stdout":str(runtime_lock),"stderr":""})
 checks.append(run("bundled_python_modules",[PYTHON,"-c","import sys; assert sys.version_info[:3] == (3, 13, 15); import faster_whisper, numpy, PIL, av, cv2, onnxruntime, yaml, pywinauto"]))
-model_bin=CONTROLLER/"dependencies"/"models"/"models--mobiuslabsgmbh--faster-whisper-large-v3-turbo"/"snapshots"/"0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf"/"model.bin"
+model_bin=ROOT/"dependencies"/"models"/"models--mobiuslabsgmbh--faster-whisper-large-v3-turbo"/"snapshots"/"0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf"/"model.bin"
 checks.append({"name":"complete_model_size","command":[],"returncode":0 if model_bin.is_file() and model_bin.stat().st_size>1_500_000_000 else 2,"passed":model_bin.is_file() and model_bin.stat().st_size>1_500_000_000,"stdout":str(model_bin),"stderr":""})
 old_job=Path(r"C:\Users\dd\Documents\Codex\2026-09-10\montage-three-part-orchestrator-c-users\work\wuzimu-beauty-v19-40x23-26")
 if (old_job/"round_1"/"batch_lock_request.json").is_file():

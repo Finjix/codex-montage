@@ -50,7 +50,7 @@ def main():
     co=sub.add_parser("complete"); co.add_argument("--job-dir",type=Path,required=True)
     st=sub.add_parser("status"); st.add_argument("--job-dir",type=Path,required=True)
     a=p.parse_args(); suite=root(a.suite_root)
-    portable_python=suite/"runtime"/"python"/"python.exe"
+    portable_python=suite/"dependencies"/"python"/"python.exe"
     if not portable_python.is_file(): raise RuntimeError(f"bundled Python missing: {portable_python}")
     if Path(sys.executable).resolve()!=portable_python.resolve():
         raise SystemExit(subprocess.call([str(portable_python),str(Path(__file__).resolve()),*sys.argv[1:]]))

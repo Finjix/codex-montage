@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 
 CONTROLLER_ROOT = Path(__file__).resolve().parents[1]
-BUNDLED_BIN = CONTROLLER_ROOT / "dependencies" / "ffmpeg" / "bin"
+BUNDLED_BIN = CONTROLLER_ROOT.parent.parent / "dependencies" / "ffmpeg" / "bin"
 FFMPEG = str(BUNDLED_BIN / "ffmpeg.exe")
 FFPROBE = str(BUNDLED_BIN / "ffprobe.exe")
 

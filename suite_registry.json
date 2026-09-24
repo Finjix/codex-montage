@@ -1,23 +1,23 @@
 {
   "schema": "montage-control-three-suite-ff/v20.2",
   "version": "20.2.5",
-  "created_at": "2026-09-24T19:13:18+08:00",
-  "suite_root": "D:\\framecut",
+  "created_at": "2026-09-24T19:28:59+08:00",
+  "suite_root": "D:\\codex-montage",
   "runtime_lock_relative_path": "runtime-lock.json",
-  "runtime_lock_sha256": "27f06ecd14f711e2f1798d355be05e45935b847e27f27dbcd62df7edfeef1847",
-  "python_runtime": {
-    "relative_path": "runtime/python",
-    "version": "3.13.15",
-    "manifest_relative_path": ".manifests/python-runtime.json",
-    "manifest_sha256": "c98b216c3fb716c7cbdc19852bc334ea96f934d0b0531ff554d78b130d46044e",
-    "tree_sha256": "3bd05db4045296322545d3b4d1d4de113bb44634be60ad94a5be262c47cab975"
+  "runtime_lock_sha256": "933cbd5be0d8d9560368175e30eb5ba4566af3d37bbc3a6db829c7a1b0ab2846",
+  "dependencies": {
+    "relative_path": "dependencies",
+    "python_version": "3.13.15",
+    "manifest_relative_path": ".manifests/dependencies.json",
+    "manifest_sha256": "55fc00a5a847f7d935969b688425b726c8d5f5a3f2b80a1beb3f4744e6fc5913",
+    "tree_sha256": "c7ffbdf50215e9bbf45bcc5f264fc04594d81856af32ac72a0cd8f0dc2f560ed"
   },
   "components": {
     "controller": {
       "relative_path": "components/ffmpeg-montage-controller",
       "manifest_relative_path": ".manifests/controller.json",
-      "manifest_sha256": "53569931059f31bae2bd4e301e66f97722a611c7596c66e09b06d6d3c1b198ab",
-      "tree_sha256": "c2338d40ca19e38965ee077a3793b9a3cb904803d68651fc785a26520ab75ae0",
+      "manifest_sha256": "79c6d4f07d0ed4aa1646c49ad851a1fe185120efecb6647497ec8430d7e99dc0",
+      "tree_sha256": "28a1e1b9df3944de150b554b20501f8e8c8b5907aeb2ce522192cf32ba0d872d",
       "interface": {
         "controller": "scripts/ffmpeg_controller.py",
         "preflight": "preflight",
@@ -33,8 +33,8 @@
     "semantic": {
       "relative_path": "components/semantic-analysis-training-backup-v20",
       "manifest_relative_path": ".manifests/semantic.json",
-      "manifest_sha256": "6d22284cc82d07b577cdefbb1fe1dbe19406ed80732e13a444c312d75756a6ef",
-      "tree_sha256": "9504c8d46fdc093d7b4cb79bc9a223afc5e006c1b34368152bce47fcae3de186",
+      "manifest_sha256": "08755dc3970aabe0745662970360492923470caf31f527789258f68c19903928",
+      "tree_sha256": "099547517b4e87685f7f213b788a3811840fcb1f688660f9a80070bdc035fea6",
       "interface": {
         "orchestrator": "scripts/v15_orchestrator.py",
         "run_command": "run-continuous",
@@ -58,8 +58,8 @@
     "executor": {
       "relative_path": "components/montage-three-part-orchestrator-ff",
       "manifest_relative_path": ".manifests/executor.json",
-      "manifest_sha256": "90fb3e03cf5559a3d738965355e1c8f834127d1f9e16ddc4e425c3d83e62d040",
-      "tree_sha256": "e3c1aa6eb4bfc818241b172fbbb42f9c5f8d3aea5a7b86f64bbf1cc4e83ba434",
+      "manifest_sha256": "d4dbc466a2bc8ffbc664aa3b099d6cb69f49b3db166085a8df799e2e9248b5c0",
+      "tree_sha256": "361ba7ee4d2ffe3c996c16b3ab4bcdbab949b98f16fbcb93732e11dfc8dca77d",
       "interface": {
         "orchestrator": "scripts/three_suite_ff.py"
       }

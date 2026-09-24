@@ -1,9 +1,9 @@
 {
   "schema": "three-suite-component-manifest/v20",
   "component": "executor",
-  "root": "D:\\framecut\\components\\montage-three-part-orchestrator-ff",
+  "root": "D:\\codex-montage\\components\\montage-three-part-orchestrator-ff",
   "file_count": 3,
-  "tree_sha256": "e3c1aa6eb4bfc818241b172fbbb42f9c5f8d3aea5a7b86f64bbf1cc4e83ba434",
+  "tree_sha256": "361ba7ee4d2ffe3c996c16b3ab4bcdbab949b98f16fbcb93732e11dfc8dca77d",
   "required_files": [
     "SKILL.md",
     "scripts/three_suite_ff.py"
@@ -16,8 +16,8 @@
     },
     {
       "path": "scripts/three_suite_ff.py",
-      "sha256": "9e71ace2bf50031591213b8db1fd94def970d9fdb9a662841561140acdab8fe7",
-      "size": 13105
+      "sha256": "3fba0f36cdd2200ecfbc5cb0d24166d1c60d7b10096fab3077b2c75c196b1957",
+      "size": 13110
     },
     {
       "path": "SKILL.md",

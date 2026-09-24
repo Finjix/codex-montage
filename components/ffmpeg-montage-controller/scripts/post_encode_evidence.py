@@ -6,8 +6,8 @@ import json
 import subprocess
 from pathlib import Path
 
-BIN = Path(__file__).resolve().parents[1] / "dependencies" / "ffmpeg" / "bin"
-FFMPEG = str(BIN / "ffmpeg.exe") if (BIN / "ffmpeg.exe").is_file() else "ffmpeg"
+BIN = Path(__file__).resolve().parents[3] / "dependencies" / "ffmpeg" / "bin"
+FFMPEG = str(BIN / "ffmpeg.exe")
 SAMPLE_RATE = 48000
 OUTPUT_FPS = 60
 FRAME_GUARD = 72

@@ -1,9 +1,9 @@
 {
   "schema": "three-suite-component-manifest/v20",
   "component": "controller",
-  "root": "D:\\framecut\\components\\ffmpeg-montage-controller",
-  "file_count": 22,
-  "tree_sha256": "c2338d40ca19e38965ee077a3793b9a3cb904803d68651fc785a26520ab75ae0",
+  "root": "D:\\codex-montage\\components\\ffmpeg-montage-controller",
+  "file_count": 12,
+  "tree_sha256": "28a1e1b9df3944de150b554b20501f8e8c8b5907aeb2ce522192cf32ba0d872d",
   "required_files": [
     "SKILL.md",
     "scripts/ffmpeg_controller.py",
@@ -15,10 +15,7 @@
     "tests/test_boundary_signal_scan.py",
     "tests/test_post_encode_review.py",
     "tests/test_post_encode_scope.py",
-    "tests/test_controller_opening_family_gate.py",
-    "dependencies/ffmpeg/bin/ffmpeg.exe",
-    "dependencies/ffmpeg/bin/ffprobe.exe",
-    "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/snapshots/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf/model.bin"
+    "tests/test_controller_opening_family_gate.py"
   ],
   "files": [
     {
@@ -27,69 +24,19 @@
       "size": 287
     },
     {
-      "path": "dependencies/ffmpeg/bin/ffmpeg.exe",
-      "sha256": "d1e2a156261ecc675081943197a85f08f2868784a0af499171ede89353edad31",
-      "size": 223360000
-    },
-    {
-      "path": "dependencies/ffmpeg/bin/ffprobe.exe",
-      "sha256": "70872c3ffbc43d0b2c570f9837f54d6e9a832f4ca25463e9735b6a3ec0621478",
-      "size": 223153664
-    },
-    {
-      "path": "dependencies/models/CACHEDIR.TAG",
-      "sha256": "e8893e2dcb3f4545ef67a0a5b7b769113d38eef1aa61c7c7ba14659b02af955f",
-      "size": 195
-    },
-    {
-      "path": "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/refs/main",
-      "sha256": "a51a4d3dbd7708ff138ea428d7018c9295bd8f05a2e35d5866df2548c5ada64b",
-      "size": 40
-    },
-    {
-      "path": "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/snapshots/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf/config.json",
-      "sha256": "b0253ea6c0d3bea6b1e19e91a02acfd3b53f4467362efcb5a3e6b16c9b3a9b7e",
-      "size": 2263
-    },
-    {
-      "path": "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/snapshots/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf/model.bin",
-      "sha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
-      "size": 1617884929
-    },
-    {
-      "path": "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/snapshots/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf/preprocessor_config.json",
-      "sha256": "7ccc62c6f2765af1f3b46c00c9b5894426835a05021c8b9c01eecb6dfb542711",
-      "size": 340
-    },
-    {
-      "path": "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/snapshots/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf/tokenizer.json",
-      "sha256": "297b13372ac43916285644fb9687add3cc62ee2a1adb60da3dc25cc94c1871fd",
-      "size": 2710337
-    },
-    {
-      "path": "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/snapshots/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf/vocabulary.json",
-      "sha256": "c69260f2ab26d659b7c398f9a2b2b48ed0df16c3b47d7326782fd9cba71690c1",
-      "size": 1068114
-    },
-    {
-      "path": "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/trees/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf.json",
-      "sha256": "7d08abef5876605d66d3fc4f95b3bb53a0a73aca8b03faa15c57a9282275e988",
-      "size": 985
-    },
-    {
       "path": "scripts/boundary_signal_scan.py",
       "sha256": "f842a9dc217e2a1c6f0a9b7947837592d98ae765fe2e21d3e6d56ea05a0a1516",
       "size": 5858
     },
     {
       "path": "scripts/ffmpeg_controller.py",
-      "sha256": "bdbeb726d3c1c759b746e985f76fbf01ea109caf2640815e903db81b417aa763",
-      "size": 10843
+      "sha256": "b09ea00b7abbf61bedf444a252d66266d349398a93b2273197492f9a8fb0b6cd",
+      "size": 10857
     },
     {
       "path": "scripts/post_encode_evidence.py",
-      "sha256": "852f178084c9dfc60cea379468a0a02d9eacf16cb5181c577abae5759a29daa1",
-      "size": 7918
+      "sha256": "226cf57c3ccd1af1190ebc199c7cb753457358497541985e38e72333eb8eeb2e",
+      "size": 7870
     },
     {
       "path": "scripts/review_post_encode.py",
@@ -98,13 +45,13 @@
     },
     {
       "path": "scripts/runtime_paths.py",
-      "sha256": "0009d988dec76273553d3efd929f091157ab94278d00a84c4358876f9e117ea1",
-      "size": 908
+      "sha256": "7f44fad7e47a86bc05cdc64d22f5cc022c48bd6bd1a7df30f005d1f922fab143",
+      "size": 887
     },
     {
       "path": "SKILL.md",
-      "sha256": "6995ee52fc6f0ec3e32f97a33c4355614b4f634a91f78b99ba1ab92cbc1ebe6d",
-      "size": 3445
+      "sha256": "b3ee6d074e07f36fa9c3821432e2c62beceaf8998bfb7f8622b55be79553f09d",
+      "size": 3447
     },
     {
       "path": "tests/test_boundary_signal_scan.py",

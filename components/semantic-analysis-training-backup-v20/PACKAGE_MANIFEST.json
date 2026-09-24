@@ -161,8 +161,8 @@
     },
     {
       "path": "references/pipeline-config.template.json",
-      "sha256": "C95C59ADF2887D109C7E31CE26308C0EBAFB0643264B8B0BC4B6AE0F449A787A",
-      "bytes": 15394
+      "sha256": "9C000E8D31700D498E56D044B50D426DA1E814A2B3E0AC302FE14D64ABB59E1D",
+      "bytes": 15244
     },
     {
       "path": "references/reference-folder-study-v11.json",
@@ -306,8 +306,8 @@
     },
     {
       "path": "scripts/portable_frame_renderer.py",
-      "sha256": "4836405C677B2C834582D6B47A7D03A6791ED3B124D6882BAFF1386A43BD968E",
-      "bytes": 11890
+      "sha256": "6C37A78DC90E573E3D9712086C1C53790E6A989E8E33051153AC37C692F3027B",
+      "bytes": 11845
     },
     {
       "path": "scripts/v11_orchestrator.py",
@@ -361,8 +361,8 @@
     },
     {
       "path": "scripts/v20_dense_boundary_evidence.py",
-      "sha256": "60098322974DB697538E716AE83C47E096818BD838EB13B1160E972DEC749514",
-      "bytes": 6318
+      "sha256": "95E97DD8BBB4AB5C4AB97C2E3A39B63B52ABDC8E9BCF8A6CB931750EDF8012C1",
+      "bytes": 6273
     },
     {
       "path": "scripts/v20_fail_closed.py",

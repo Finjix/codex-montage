@@ -1,34 +1,34 @@
 {
   "schema": "ff-suite-portable-runtime-lock/v1",
   "version": "20.2.5",
-  "created_at": "2026-09-24T19:13:18+08:00",
+  "created_at": "2026-09-24T19:28:59+08:00",
   "render_mode": "source_frame_ranges/v1",
   "seconds_only_fallback": false,
   "files": {
     "python": {
-      "relative_path": "runtime/python/python.exe",
+      "relative_path": "dependencies/python/python.exe",
       "sha256": "85b71d8c6ec1905935f74be0c9869aae198d00e98f39df699ec66f9c5a84cecd",
       "size": 105696
     },
     "python_dll": {
-      "relative_path": "runtime/python/python313.dll",
+      "relative_path": "dependencies/python/python313.dll",
       "sha256": "e820bf024efd2b56bb2b82791e6b6ddc7303f070f8e72cba7637482a8a906238",
       "size": 6135008
     },
     "python_config": {
-      "relative_path": "runtime/python/python313._pth",
+      "relative_path": "dependencies/python/python313._pth",
       "sha256": "7ecb59a40ae14c055149693393c2a4790415f5770fc4f73c14dcae391fc4e867",
       "size": 46
     },
-    "python_runtime_manifest": {
-      "relative_path": ".manifests/python-runtime.json",
-      "sha256": "c98b216c3fb716c7cbdc19852bc334ea96f934d0b0531ff554d78b130d46044e",
-      "size": 1003055
+    "dependencies_manifest": {
+      "relative_path": ".manifests/dependencies.json",
+      "sha256": "55fc00a5a847f7d935969b688425b726c8d5f5a3f2b80a1beb3f4744e6fc5913",
+      "size": 1042222
     },
     "portable_renderer": {
       "relative_path": "components/semantic-analysis-training-backup-v20/scripts/portable_frame_renderer.py",
-      "sha256": "4836405c677b2c834582d6b47a7d03a6791ed3b124d6882baff1386a43bd968e",
-      "size": 11890
+      "sha256": "6c37a78dc90e573e3d9712086c1c53790e6a989e8e33051153ac37c692f3027b",
+      "size": 11845
     },
     "frame_range_repair": {
       "relative_path": "components/semantic-analysis-training-backup-v20/scripts/frame_range_repair.py",
@@ -61,14 +61,19 @@
       "size": 5858
     },
     "ffmpeg": {
-      "relative_path": "components/ffmpeg-montage-controller/dependencies/ffmpeg/bin/ffmpeg.exe",
+      "relative_path": "dependencies/ffmpeg/bin/ffmpeg.exe",
       "sha256": "d1e2a156261ecc675081943197a85f08f2868784a0af499171ede89353edad31",
       "size": 223360000
     },
     "ffprobe": {
-      "relative_path": "components/ffmpeg-montage-controller/dependencies/ffmpeg/bin/ffprobe.exe",
+      "relative_path": "dependencies/ffmpeg/bin/ffprobe.exe",
       "sha256": "70872c3ffbc43d0b2c570f9837f54d6e9a832f4ca25463e9735b6a3ec0621478",
       "size": 223153664
+    },
+    "model": {
+      "relative_path": "dependencies/models/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/snapshots/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf/model.bin",
+      "sha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "size": 1617884929
     }
   }
 }

@@ -44,7 +44,7 @@ def runtime_binary(name: str) -> Path:
     script = Path(__file__).resolve()
     candidates.extend(
         [
-            script.parents[3] / "components" / "ffmpeg-montage-controller" / "dependencies" / "ffmpeg" / "bin" / f"{name}.exe",
+            script.parents[3] / "dependencies" / "ffmpeg" / "bin" / f"{name}.exe",
         ]
     )
     for candidate in candidates:
