@@ -24,4 +24,4 @@ Never add BGM, captions, overlays or extra audio unless the current user explici
 
 Technical decode is not editorial QC. A final receipt requires every exact output frame ±0.4s and frame-derived PCM ±0.5s at every renderer-declared cut, a passing machine signal report, and a hash-bound independent review of the original frame set. The machine gate rejects any extra visual transition within 12 frames of the intended cut, including a 2–12 frame short insert. It scans an audio window around the cut rather than one nominal PCM sample. Compact sheets cannot authorize release.
 
-Use bundled `dependencies/ffmpeg/bin`, `dependencies/python`, and the complete faster-whisper model under `dependencies/models`. Run `scripts/runtime_paths.py` to resolve them. A preflight that falls back to system FFmpeg is not portable-release validation.
+Use bundled `dependencies/ffmpeg/bin`, the suite's `runtime/python/python.exe` with its local modules, and the complete faster-whisper model under `dependencies/models`. Run `scripts/runtime_paths.py` with that Python to resolve them. A preflight must not fall back to system FFmpeg or Python.

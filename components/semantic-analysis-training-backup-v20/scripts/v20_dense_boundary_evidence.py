@@ -9,8 +9,8 @@ from pathlib import Path
 
 SUITE_ROOT = Path(__file__).resolve().parents[3]
 BIN = SUITE_ROOT / "components" / "ffmpeg-montage-controller" / "dependencies" / "ffmpeg" / "bin"
-FFMPEG = str(BIN / "ffmpeg.exe") if (BIN / "ffmpeg.exe").is_file() else "ffmpeg"
-FFPROBE = str(BIN / "ffprobe.exe") if (BIN / "ffprobe.exe").is_file() else "ffprobe"
+FFMPEG = str(BIN / "ffmpeg.exe")
+FFPROBE = str(BIN / "ffprobe.exe")
 SAMPLE_RATE = 48000
 WINDOW_SECONDS = 1.2
 STABLE_RUN_REQUIRED_FRAMES = 60

@@ -21,8 +21,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "1ADDCCFA73840BBDFA144B9D7BF40A1BCB796F7B26AE7AEA596446DF9A31DF00",
-      "bytes": 42643
+      "sha256": "E69A2A3DE4491A478D2EDA3A210E044D141052E6BA49B4572B0A3C1F0C4647E3",
+      "bytes": 42842
     },
     {
       "path": "batch-gate-report.schema.json",
@@ -361,8 +361,8 @@
     },
     {
       "path": "scripts/v20_dense_boundary_evidence.py",
-      "sha256": "5798E41C1E0795F14839EF36A1684CD48BC6FB30B7634A52B741611ED79C8009",
-      "bytes": 6416
+      "sha256": "60098322974DB697538E716AE83C47E096818BD838EB13B1160E972DEC749514",
+      "bytes": 6318
     },
     {
       "path": "scripts/v20_fail_closed.py",

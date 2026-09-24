@@ -49,7 +49,12 @@ def main():
     cv=sub.add_parser("controller-validate"); cv.add_argument("--job-dir",type=Path,required=True); cv.add_argument("--manifest",type=Path,required=True); cv.add_argument("--semantic-release",type=Path,required=True); cv.add_argument("--post-qc",type=Path,required=True); cv.add_argument("--opening-family-report",type=Path,required=True); cv.add_argument("--report",type=Path,required=True)
     co=sub.add_parser("complete"); co.add_argument("--job-dir",type=Path,required=True)
     st=sub.add_parser("status"); st.add_argument("--job-dir",type=Path,required=True)
-    a=p.parse_args(); suite=root(a.suite_root); c=verify(suite)
+    a=p.parse_args(); suite=root(a.suite_root)
+    portable_python=suite/"runtime"/"python"/"python.exe"
+    if not portable_python.is_file(): raise RuntimeError(f"bundled Python missing: {portable_python}")
+    if Path(sys.executable).resolve()!=portable_python.resolve():
+        raise SystemExit(subprocess.call([str(portable_python),str(Path(__file__).resolve()),*sys.argv[1:]]))
+    c=verify(suite)
     if a.command=="preflight": print(json.dumps({"schema":"ff-three-suite-preflight/v20.2","decision":"pass","render_mode":"source_frame_ranges/v1","seconds_only_fallback":False,"components":{k:v["tree_sha256"] for k,v in c.items()}},ensure_ascii=False)); return
     if a.command=="init":
         job=a.job_dir.resolve();

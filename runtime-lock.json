@@ -1,10 +1,30 @@
 {
   "schema": "ff-suite-portable-runtime-lock/v1",
   "version": "20.2.5",
-  "created_at": "2026-09-24T18:36:01+08:00",
+  "created_at": "2026-09-24T19:03:56+08:00",
   "render_mode": "source_frame_ranges/v1",
   "seconds_only_fallback": false,
   "files": {
+    "python": {
+      "relative_path": "runtime/python/python.exe",
+      "sha256": "85b71d8c6ec1905935f74be0c9869aae198d00e98f39df699ec66f9c5a84cecd",
+      "size": 105696
+    },
+    "python_dll": {
+      "relative_path": "runtime/python/python313.dll",
+      "sha256": "e820bf024efd2b56bb2b82791e6b6ddc7303f070f8e72cba7637482a8a906238",
+      "size": 6135008
+    },
+    "python_config": {
+      "relative_path": "runtime/python/python313._pth",
+      "sha256": "7ecb59a40ae14c055149693393c2a4790415f5770fc4f73c14dcae391fc4e867",
+      "size": 46
+    },
+    "python_runtime_manifest": {
+      "relative_path": ".manifests/python-runtime.json",
+      "sha256": "c98b216c3fb716c7cbdc19852bc334ea96f934d0b0531ff554d78b130d46044e",
+      "size": 1003055
+    },
     "portable_renderer": {
       "relative_path": "components/semantic-analysis-training-backup-v20/scripts/portable_frame_renderer.py",
       "sha256": "4836405c677b2c834582d6b47a7d03a6791ed3b124d6882baff1386a43bd968e",

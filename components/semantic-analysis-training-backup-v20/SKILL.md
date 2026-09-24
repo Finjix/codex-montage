@@ -8,6 +8,8 @@ metadata:
 
 # Semantic-analysis production orchestration V20
 
+Execute this package through the suite root's `run.cmd`; the suite carries Python 3.13.15 and all required modules locally. Do not invoke a system Python or install modules during a production run.
+
 ## V20.2.5 internal-gap and final-opening release closure
 
 Read [the internal silence compaction and final visual review contract](references/v20-internal-silence-compaction.md) for any mid-turn breath-gap removal, PCM clipping repair or opening-diversity release. A noncontiguous same-source continuation marked as silence removal must carry hash-bound `internal-silence-alignment-evidence/v1`; the frame-plan gate rejects undeclared or token-overlapping deletions. Uniform gain repair is allowed only for true PCM clipping and must preserve exact source frames and lineage.

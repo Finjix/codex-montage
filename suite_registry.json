@@ -1,16 +1,23 @@
 {
   "schema": "montage-control-three-suite-ff/v20.2",
   "version": "20.2.5",
-  "created_at": "2026-09-24T18:36:01+08:00",
+  "created_at": "2026-09-24T19:03:56+08:00",
   "suite_root": "D:\\framecut",
   "runtime_lock_relative_path": "runtime-lock.json",
-  "runtime_lock_sha256": "69425f80a87a9c5b7571e5d15d88f9e7d1850a7a115fa975bae16dd14842b0ff",
+  "runtime_lock_sha256": "e124e8bb1ff0846b673b81c0d7c8bc7ec33b20b9e4ff5f9d38a28a9e6ba34ba3",
+  "python_runtime": {
+    "relative_path": "runtime/python",
+    "version": "3.13.15",
+    "manifest_relative_path": ".manifests/python-runtime.json",
+    "manifest_sha256": "c98b216c3fb716c7cbdc19852bc334ea96f934d0b0531ff554d78b130d46044e",
+    "tree_sha256": "3bd05db4045296322545d3b4d1d4de113bb44634be60ad94a5be262c47cab975"
+  },
   "components": {
     "controller": {
       "relative_path": "components/ffmpeg-montage-controller",
       "manifest_relative_path": ".manifests/controller.json",
-      "manifest_sha256": "9da04e620460da9cdc43a8c47b4e6b6fef3fe8c6095880bcdd40304579d83dd7",
-      "tree_sha256": "864951ec64d171f6fe9dd6572e7bf1a39ea7874a9e7318b1a10151259b1db84d",
+      "manifest_sha256": "53569931059f31bae2bd4e301e66f97722a611c7596c66e09b06d6d3c1b198ab",
+      "tree_sha256": "c2338d40ca19e38965ee077a3793b9a3cb904803d68651fc785a26520ab75ae0",
       "interface": {
         "controller": "scripts/ffmpeg_controller.py",
         "preflight": "preflight",
@@ -26,8 +33,8 @@
     "semantic": {
       "relative_path": "components/semantic-analysis-training-backup-v20",
       "manifest_relative_path": ".manifests/semantic.json",
-      "manifest_sha256": "b59b29370a1b53674a747df38841254440bdf308e66939d79867fe7495ec7963",
-      "tree_sha256": "211a277f5ce1a9a99d30fa194b89b9a7b6572d4ce2ee6794ac2e4d6a804131c2",
+      "manifest_sha256": "6d22284cc82d07b577cdefbb1fe1dbe19406ed80732e13a444c312d75756a6ef",
+      "tree_sha256": "9504c8d46fdc093d7b4cb79bc9a223afc5e006c1b34368152bce47fcae3de186",
       "interface": {
         "orchestrator": "scripts/v15_orchestrator.py",
         "run_command": "run-continuous",
@@ -51,8 +58,8 @@
     "executor": {
       "relative_path": "components/montage-three-part-orchestrator-ff",
       "manifest_relative_path": ".manifests/executor.json",
-      "manifest_sha256": "789a769f0d80e3f2f497b90ab143dc778e51c486adddfc949cf2a82130aa5c8d",
-      "tree_sha256": "1104ba8f202bc9b949fdce10f874b122e4641c71c4fd8059fd9ff20a895b8fd6",
+      "manifest_sha256": "90fb3e03cf5559a3d738965355e1c8f834127d1f9e16ddc4e425c3d83e62d040",
+      "tree_sha256": "e3c1aa6eb4bfc818241b172fbbb42f9c5f8d3aea5a7b86f64bbf1cc4e83ba434",
       "interface": {
         "orchestrator": "scripts/three_suite_ff.py"
       }

@@ -11,8 +11,8 @@ from pathlib import Path
 
 CONTROLLER_ROOT = Path(__file__).resolve().parents[1]
 BUNDLED_BIN = CONTROLLER_ROOT / "dependencies" / "ffmpeg" / "bin"
-FFMPEG = str(BUNDLED_BIN / "ffmpeg.exe") if (BUNDLED_BIN / "ffmpeg.exe").is_file() else "ffmpeg"
-FFPROBE = str(BUNDLED_BIN / "ffprobe.exe") if (BUNDLED_BIN / "ffprobe.exe").is_file() else "ffprobe"
+FFMPEG = str(BUNDLED_BIN / "ffmpeg.exe")
+FFPROBE = str(BUNDLED_BIN / "ffprobe.exe")
 
 
 def read(path: Path) -> dict:

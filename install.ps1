@@ -1,29 +1,24 @@
 ﻿[CmdletBinding()]
 param(
     [string]$InstallRoot = "$env:USERPROFILE\CodexMontageFF\20.2.5",
-    [switch]$InstallMissingPython,
     [switch]$PreflightOnly
 )
 $ErrorActionPreference='Stop'; Set-StrictMode -Version Latest
-function Find-Python310 {
-    $items=@("$env:LOCALAPPDATA\Programs\Python\Python310\python.exe","$env:ProgramFiles\Python310\python.exe")
-    foreach($item in $items){if(Test-Path -LiteralPath $item){& $item -c "import sys;raise SystemExit(0 if sys.version_info[:2]==(3,10) else 1)";if($LASTEXITCODE-eq 0){return $item}}}
-    $command=Get-Command python.exe -ErrorAction SilentlyContinue;if($command){& $command.Source -c "import sys;raise SystemExit(0 if sys.version_info[:2]==(3,10) else 1)";if($LASTEXITCODE-eq 0){return $command.Source}}
-    return $null
-}
 if(-not [Environment]::Is64BitOperatingSystem){throw '仅支持64位Windows 10/11。'}
 $source=Split-Path -Parent $MyInvocation.MyCommand.Path
-$python=Find-Python310
-if($null-eq $python -and $InstallMissingPython){$winget=Get-Command winget.exe -ErrorAction SilentlyContinue;if(-not $winget){throw '缺少Python 3.10且没有winget。'};& $winget.Source install --exact --id Python.Python.3.10 --accept-package-agreements --accept-source-agreements --silent;$python=Find-Python310}
-if($null-eq $python){throw '缺少64位Python 3.10。'}
+$python=Join-Path $source 'runtime\python\python.exe'
+if(-not(Test-Path -LiteralPath $python)){throw "随包 Python 缺失：$python"}
+& $python -c "import sys; raise SystemExit(0 if sys.version_info[:3] == (3, 13, 15) and sys.maxsize > 2**32 else 1)"
+if($LASTEXITCODE-ne 0){throw '随包 Python 必须是 64 位 3.13.15。'}
 $ff="$source\components\ffmpeg-montage-controller\dependencies\ffmpeg\bin\ffmpeg.exe";$fp="$source\components\ffmpeg-montage-controller\dependencies\ffmpeg\bin\ffprobe.exe";$model="$source\components\ffmpeg-montage-controller\dependencies\models\models--mobiuslabsgmbh--faster-whisper-large-v3-turbo\snapshots\0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf\model.bin"
 $semantic="$source\components\semantic-analysis-training-backup-v20";$renderer="$semantic\scripts\portable_frame_renderer.py";$repair="$semantic\scripts\frame_range_repair.py";$frameGate="$semantic\scripts\v20_frame_plan_gate.py";$ledger="$semantic\scripts\winky_ledger.py";$runtimeLock="$source\runtime-lock.json"
 foreach($required in $ff,$fp,$model,$renderer,$repair,$frameGate,$ledger,$runtimeLock){if(-not(Test-Path -LiteralPath $required)){throw "便携依赖缺失：$required"}}
-if($PreflightOnly){& $python -X utf8 "$source\tools\build_ff_suite.py" verify;if($LASTEXITCODE-ne 0){throw '组件树验证失败'};& $python -X utf8 "$source\tools\verify_suite.py";if($LASTEXITCODE-ne 0){throw '三件套验证失败'};@{schema='v20-ff-deployment-preflight/v1';version='20.2.5';decision='pass';python=$python;ffmpeg=$ff;ffprobe=$fp;model=$model}|ConvertTo-Json -Depth 4;return}
+if($PreflightOnly){& $python -X utf8 "$source\tools\build_ff_suite.py" verify;if($LASTEXITCODE-ne 0){throw '组件树验证失败'};& $python -X utf8 "$source\tools\verify_suite.py";if($LASTEXITCODE-ne 0){throw '三件套验证失败'};& $python -c "import faster_whisper, onnxruntime, cv2, PIL, yaml";if($LASTEXITCODE-ne 0){throw '随包 Python 模块加载失败'};@{schema='v20-ff-deployment-preflight/v1';version='20.2.5';decision='pass';python=$python;ffmpeg=$ff;ffprobe=$fp;model=$model}|ConvertTo-Json -Depth 4;return}
 $resolved=[IO.Path]::GetFullPath($InstallRoot);if($resolved.Length-gt 90){throw "安装根目录过长，会导致PyAV DLL加载失败，请改用短路径，例如 C:\CodexMontageFF\20.2.5：$resolved"};if(Test-Path -LiteralPath $resolved){throw "目标版本目录已存在，请更换InstallRoot：$resolved"};New-Item -ItemType Directory -Path $resolved -Force|Out-Null
-& robocopy.exe $source $resolved /E /COPY:DAT /DCOPY:DAT /R:2 /W:1 /XD .git artifacts __pycache__ .pytest_cache /XF *.pyc *.zip *.sha256 'deployment-report.json'|Out-Null;if($LASTEXITCODE-ge 8){throw "复制失败：$LASTEXITCODE"}
-& $python -X utf8 "$resolved\tools\build_ff_suite.py" build|Out-Null;if($LASTEXITCODE-ne 0){throw '重建注册表失败'}
-& $python -X utf8 "$resolved\tools\validate_v20_release.py";if($LASTEXITCODE-ne 0){throw 'V20发布验证失败'}
+& robocopy.exe $source $resolved /E /COPY:DAT /DCOPY:DAT /R:2 /W:1 /XD .git artifacts __pycache__ .pytest_cache /XF *.pyc 'deployment-report.json'|Out-Null;if($LASTEXITCODE-ge 8){throw "复制失败：$LASTEXITCODE"}
+$installedPython=Join-Path $resolved 'runtime\python\python.exe'
+& $installedPython -X utf8 "$resolved\tools\build_ff_suite.py" build|Out-Null;if($LASTEXITCODE-ne 0){throw '重建注册表失败'}
+& $installedPython -X utf8 "$resolved\tools\validate_v20_release.py";if($LASTEXITCODE-ne 0){throw 'V20发布验证失败'}
 $codexHome=if($env:CODEX_HOME){$env:CODEX_HOME}else{"$env:USERPROFILE\.codex"};$skills="$codexHome\skills";$officialSkills="$env:USERPROFILE\.agents\skills";New-Item -ItemType Directory -Path $skills,$officialSkills -Force|Out-Null
 $installedSkillPaths=@();foreach($pair in @(@("$resolved\components\ffmpeg-montage-controller","ffmpeg-montage-controller"),@("$resolved\components\semantic-analysis-training-backup-v20","semantic-analysis-training-backup-v20"),@("$resolved\components\montage-three-part-orchestrator-ff","montage-three-part-orchestrator-ff"))){$src=$pair[0];$name=$pair[1];$dst=Join-Path $skills $name;if(Test-Path -LiteralPath $dst){$backup="$codexHome\skill-backups\$name.bak-$(Get-Date -Format yyyyMMdd-HHmmss)";New-Item -ItemType Directory -Path (Split-Path -Parent $backup)-Force|Out-Null;Move-Item -LiteralPath $dst -Destination $backup};Copy-Item -LiteralPath $src -Destination $dst -Recurse;$officialDst=Join-Path $officialSkills $name;if(Test-Path -LiteralPath $officialDst){$backup="$codexHome\skill-backups\official-$name.bak-$(Get-Date -Format yyyyMMdd-HHmmss)";New-Item -ItemType Directory -Path (Split-Path -Parent $backup)-Force|Out-Null;Move-Item -LiteralPath $officialDst -Destination $backup};try{New-Item -ItemType Junction -Path $officialDst -Target $dst -ErrorAction Stop|Out-Null}catch{Copy-Item -LiteralPath $dst -Destination $officialDst -Recurse};$installedSkillPaths+=@($dst,$officialDst)}
 $active="$codexHome\three-part-suite-ff\active.json";New-Item -ItemType Directory -Path (Split-Path -Parent $active)-Force|Out-Null;@{schema='three-part-suite-ff-active/v1';suite_root=$resolved;version='20.2.5';render_mode='source_frame_ranges/v1';adjacent_same_source='coalesce_monotonic_touching_or_overlapping_frame_ranges';seconds_only_fallback=$false}|ConvertTo-Json|Set-Content -LiteralPath $active -Encoding UTF8

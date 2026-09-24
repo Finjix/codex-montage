@@ -4,10 +4,12 @@
 
 ## 使用入口
 
-- 执行器：`components/montage-three-part-orchestrator-ff/scripts/three_suite_ff.py`
+- 执行器：`run.cmd`（使用随包 Python 3.13.15）
 - 部署：双击 `start.cmd`，或运行 `install.ps1`
 - 只做部署预检：`powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -PreflightOnly`
-- 校验三件套：`python tools/build_ff_suite.py verify`
-- 运行回归与发布检查：`python tools/validate_v20_release.py`
+- 校验三件套：`runtime\python\python.exe tools\build_ff_suite.py verify`
+- 运行回归与发布检查：`runtime\python\python.exe tools\validate_v20_release.py`
 
 `suite_registry.json`、`runtime-lock.json` 和 `.manifests/` 是运行时清单。维护脚本生成的本机报告写入 `artifacts/`，不纳入版本控制。详细规则见 [使用说明](docs/使用说明.md) 和 [跨电脑部署说明](docs/跨电脑部署说明.md)。
+
+Python、运行所需模块、Visual C++ DLL、FFmpeg 和模型均在仓库内；启动脚本不查找或安装系统 Python。依赖来源见 [便携依赖说明](docs/便携依赖说明.md)。
