@@ -1,9 +1,9 @@
 {
   "schema": "three-suite-component-manifest/v20",
   "component": "semantic",
-  "root": "C:\\Users\\dd\\Downloads\\控制三件套FF版\\02-语义分析包\\versions\\semantic-analysis-training-backup-v20",
+  "root": "D:\\framecut\\components\\semantic-analysis-training-backup-v20",
   "file_count": 103,
-  "tree_sha256": "d41749c3df9dfc739e4a377391f68d4e359fb47721a15622681bc518e15c3e10",
+  "tree_sha256": "211a277f5ce1a9a99d30fa194b89b9a7b6572d4ce2ee6794ac2e4d6a804131c2",
   "required_files": [
     "SKILL.md",
     "capability.json",
@@ -51,7 +51,7 @@
     },
     {
       "path": "PACKAGE_MANIFEST.json",
-      "sha256": "28da377346fd446f97e0a3000a63e15146d71aac2c9803a96e5071666c48506b",
+      "sha256": "3f868e31f51c7d98faff2931225d1b2f8dab1e5bbfd137b4e8f49462b5607b7e",
       "size": 18954
     },
     {
@@ -331,8 +331,8 @@
     },
     {
       "path": "scripts/portable_frame_renderer.py",
-      "sha256": "e57cf6f168df70ba9d2cb0115f6d593df65559515af4c14d5020346d7a19a4fd",
-      "size": 12011
+      "sha256": "4836405c677b2c834582d6b47a7d03a6791ed3b124d6882baff1386a43bd968e",
+      "size": 11890
     },
     {
       "path": "scripts/v11_orchestrator.py",
@@ -386,8 +386,8 @@
     },
     {
       "path": "scripts/v20_dense_boundary_evidence.py",
-      "sha256": "327e4fde54ec07a0b40b98a1c38ec12378df1f6a03827af39b2a0c7272324f37",
-      "size": 6424
+      "sha256": "5798e41c1e0795f14839ef36a1684cd48bc6fb30b7634a52b741611ed79c8009",
+      "size": 6416
     },
     {
       "path": "scripts/v20_fail_closed.py",

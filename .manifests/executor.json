@@ -1,7 +1,7 @@
 {
   "schema": "three-suite-component-manifest/v20",
   "component": "executor",
-  "root": "C:\\Users\\dd\\Downloads\\控制三件套FF版\\03-完整执行器\\montage-three-part-orchestrator-ff",
+  "root": "D:\\framecut\\components\\montage-three-part-orchestrator-ff",
   "file_count": 3,
   "tree_sha256": "1104ba8f202bc9b949fdce10f874b122e4641c71c4fd8059fd9ff20a895b8fd6",
   "required_files": [

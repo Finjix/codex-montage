@@ -1,7 +1,7 @@
 {
   "schema": "three-suite-component-manifest/v20",
   "component": "controller",
-  "root": "C:\\Users\\dd\\Downloads\\控制三件套FF版\\01-FFmpeg控制器\\ffmpeg-montage-controller",
+  "root": "D:\\framecut\\components\\ffmpeg-montage-controller",
   "file_count": 5217,
   "tree_sha256": "864951ec64d171f6fe9dd6572e7bf1a39ea7874a9e7318b1a10151259b1db84d",
   "required_files": [

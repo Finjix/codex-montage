@@ -1,15 +1,15 @@
 {
   "schema": "montage-control-three-suite-ff/v20.2",
   "version": "20.2.5",
-  "created_at": "2026-09-22T14:25:05+08:00",
-  "suite_root": "C:\\Users\\dd\\Downloads\\控制三件套FF版",
+  "created_at": "2026-09-24T18:36:01+08:00",
+  "suite_root": "D:\\framecut",
   "runtime_lock_relative_path": "runtime-lock.json",
-  "runtime_lock_sha256": "3b2ce0448433ecb3ab15879801e4a963efec993ebfa3e0b55364cdbe138bab80",
+  "runtime_lock_sha256": "69425f80a87a9c5b7571e5d15d88f9e7d1850a7a115fa975bae16dd14842b0ff",
   "components": {
     "controller": {
-      "relative_path": "01-FFmpeg控制器/ffmpeg-montage-controller",
+      "relative_path": "components/ffmpeg-montage-controller",
       "manifest_relative_path": ".manifests/controller.json",
-      "manifest_sha256": "a249dc05028533f6fc4d1544c5be891c909be8667df5d2580354d57d98cbfd22",
+      "manifest_sha256": "9da04e620460da9cdc43a8c47b4e6b6fef3fe8c6095880bcdd40304579d83dd7",
       "tree_sha256": "864951ec64d171f6fe9dd6572e7bf1a39ea7874a9e7318b1a10151259b1db84d",
       "interface": {
         "controller": "scripts/ffmpeg_controller.py",
@@ -24,10 +24,10 @@
       }
     },
     "semantic": {
-      "relative_path": "02-语义分析包/versions/semantic-analysis-training-backup-v20",
+      "relative_path": "components/semantic-analysis-training-backup-v20",
       "manifest_relative_path": ".manifests/semantic.json",
-      "manifest_sha256": "7a1be561242f9414b6eb76d5413501ad8fb9bdde8069e38e020277e108d317c5",
-      "tree_sha256": "d41749c3df9dfc739e4a377391f68d4e359fb47721a15622681bc518e15c3e10",
+      "manifest_sha256": "b59b29370a1b53674a747df38841254440bdf308e66939d79867fe7495ec7963",
+      "tree_sha256": "211a277f5ce1a9a99d30fa194b89b9a7b6572d4ce2ee6794ac2e4d6a804131c2",
       "interface": {
         "orchestrator": "scripts/v15_orchestrator.py",
         "run_command": "run-continuous",
@@ -49,9 +49,9 @@
       "version": "20.2.5"
     },
     "executor": {
-      "relative_path": "03-完整执行器/montage-three-part-orchestrator-ff",
+      "relative_path": "components/montage-three-part-orchestrator-ff",
       "manifest_relative_path": ".manifests/executor.json",
-      "manifest_sha256": "f771539a7078035ebcd89aa5c633baf9a98d0fa72dabf00bd56a84f8e00dda9a",
+      "manifest_sha256": "789a769f0d80e3f2f497b90ab143dc778e51c486adddfc949cf2a82130aa5c8d",
       "tree_sha256": "1104ba8f202bc9b949fdce10f874b122e4641c71c4fd8059fd9ff20a895b8fd6",
       "interface": {
         "orchestrator": "scripts/three_suite_ff.py"
