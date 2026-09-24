@@ -18,4 +18,4 @@ Order is mandatory: `immutable semantic evidence -> separate independent candida
 
 Resolve components from `suite_registry.json`. Never substitute old candidate approvals, skip V20 invalid-range checks, accept generator-written passes, or release on technical validation alone.
 
-Run the suite root's `run.cmd preflight`, then `run.cmd init`. It uses the bundled Python 3.13.15 for this executor and every child process. Completion requires the V20 semantic receipt, FF preflight, exact-60 delivery manifest, passing independent post-encode QC and passing FF controller validation.
+Run `dependencies/python/python.exe components/montage-three-part-orchestrator-ff/scripts/three_suite_ff.py preflight` from the suite root, then invoke the same script with `init` and its required arguments. Use this bundled Python 3.13.15 for the executor and every child process. Completion requires the V20 semantic receipt, FF preflight, exact-60 delivery manifest, passing independent post-encode QC and passing FF controller validation.

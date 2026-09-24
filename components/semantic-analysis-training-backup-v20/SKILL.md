@@ -8,7 +8,7 @@ metadata:
 
 # Semantic-analysis production orchestration V20
 
-Execute this package through the suite root's `run.cmd`; the suite carries Python 3.13.15 and all required modules locally. Do not invoke a system Python or install modules during a production run.
+Execute this package through the `montage-three-part-orchestrator-ff` skill, using the suite root's `dependencies/python/python.exe` and its `components/montage-three-part-orchestrator-ff/scripts/three_suite_ff.py` executor. Do not invoke a system Python or install modules during a production run.
 
 ## V20.2.5 internal-gap and final-opening release closure
 

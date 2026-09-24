@@ -3,7 +3,7 @@
   "component": "semantic",
   "root": "D:\\codex-montage\\components\\semantic-analysis-training-backup-v20",
   "file_count": 103,
-  "tree_sha256": "099547517b4e87685f7f213b788a3811840fcb1f688660f9a80070bdc035fea6",
+  "tree_sha256": "e7b94fcba02f77c60560f3977090edad1739062fa57974274981f8c0092f08b3",
   "required_files": [
     "SKILL.md",
     "capability.json",
@@ -51,7 +51,7 @@
     },
     {
       "path": "PACKAGE_MANIFEST.json",
-      "sha256": "70b7f8def23f51bf05c28bf03a36a33ff17e9e530216d1160e1772f16e441278",
+      "sha256": "399629c80ab646b4eb730e42470541c61f608c67c77157d223e515888a9fa8d7",
       "size": 18954
     },
     {
@@ -451,8 +451,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "e69a2a3de4491a478d2eda3a210e044d141052e6ba49b4572b0a3c1f0c4647e3",
-      "size": 42842
+      "sha256": "e06822eebdc1c3125aa79673c47b1ceebf20b2681f50aedc81081b938455b396",
+      "size": 42943
     },
     {
       "path": "tests/test_v11_live_action_gate.py",

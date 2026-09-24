@@ -4,7 +4,7 @@ codex-montage 是 FF 三件套（V20.2.5）项目，包含 FFmpeg 控制器、�
 
 ## 使用入口
 
-- 执行器：`run.cmd`（使用随包 Python 3.13.15）
+- 工作流：在 Codex 中使用 `montage-three-part-orchestrator-ff` 技能
 - 部署：双击 `start.cmd`，或运行 `install.ps1`
 - 只做部署预检：`powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install.ps1 -PreflightOnly`
 - 校验三件套：`dependencies\python\python.exe tools\build_ff_suite.py verify`
