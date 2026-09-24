@@ -1,0 +1,2146 @@
+{
+  "schema": "v20-fail-closed-prelock-report/v1",
+  "decision": "reject",
+  "failures": [
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:A02_SHORT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:A02_SHORT",
+      "detail": "bad-cta02-entry-proof"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A02_SHORT",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A02_SHORT",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A02_SHORT",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A02_SHORT",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A02_SHORT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:A09_FULL",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A09_FULL",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A09_FULL",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A09_FULL",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A09_FULL",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:A09_FULL",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:C01_SIMPLE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C01_SIMPLE",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C01_SIMPLE",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C01_SIMPLE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:C02_FURNACE_CLOSED",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C02_FURNACE_CLOSED",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C02_FURNACE_CLOSED",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C02_FURNACE_CLOSED",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C02_FURNACE_CLOSED",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C02_FURNACE_CLOSED",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:C04_COLD_SHORT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:C04_COLD_SHORT",
+      "detail": "bad-c04-cold-short"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C04_COLD_SHORT",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C04_COLD_SHORT",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C04_COLD_SHORT",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C04_COLD_SHORT",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C04_COLD_SHORT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:C07_ACHIEVE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_ACHIEVE",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_ACHIEVE",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_ACHIEVE",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_ACHIEVE",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_ACHIEVE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:C07_STATS",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_STATS",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_STATS",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_STATS",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_STATS",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C07_STATS",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:C08_ACHIEVE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C08_ACHIEVE",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C08_ACHIEVE",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C08_ACHIEVE",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C08_ACHIEVE",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:C08_ACHIEVE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:H04_RELIEF",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:H04_RELIEF",
+      "detail": "bad-h04-relief"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H04_RELIEF",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H04_RELIEF",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H04_RELIEF",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H04_RELIEF",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H04_RELIEF",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:H06_POWER",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:H06_POWER",
+      "detail": "bad-h06-power"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_POWER",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_POWER",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_POWER",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_POWER",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_POWER",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:H06_STAR",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_STAR",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_STAR",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_STAR",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_STAR",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H06_STAR",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:H08_DIALOGUE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H08_DIALOGUE",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H08_DIALOGUE",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H08_DIALOGUE",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H08_DIALOGUE",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H08_DIALOGUE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:H09_FAKE_Q",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H09_FAKE_Q",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H09_FAKE_Q",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H09_FAKE_Q",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H09_FAKE_Q",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:H09_FAKE_Q",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M02_TREE_SURVIVOR",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M02_TREE_SURVIVOR",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M02_TREE_SURVIVOR",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M02_TREE_SURVIVOR",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M02_TREE_SURVIVOR",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M02_TREE_SURVIVOR",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M03_FURNACE_FULL",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:M03_FURNACE_FULL",
+      "detail": "bad-m03-furnace-full"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_FULL",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_FULL",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_FULL",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_FULL",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_FULL",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M03_FURNACE_RESULT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:M03_FURNACE_RESULT",
+      "detail": "bad-m03-furnace-full"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_RESULT",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_RESULT",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_RESULT",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_RESULT",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M03_FURNACE_RESULT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M06_TREE_FURNACE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M06_TREE_FURNACE",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M06_TREE_FURNACE",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M06_TREE_FURNACE",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M06_TREE_FURNACE",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M06_TREE_FURNACE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M07_BASIC",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_BASIC",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_BASIC",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_BASIC",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_BASIC",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_BASIC",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M07_TO_SURVIVOR",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_SURVIVOR",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_SURVIVOR",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_SURVIVOR",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_SURVIVOR",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_SURVIVOR",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M07_TO_TEMP",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_TEMP",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_TEMP",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_TEMP",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_TEMP",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TO_TEMP",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M10_CHAIN_FULL",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_FULL",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_FULL",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_FULL",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_FULL",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_FULL",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M10_CHAIN_SHORT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_SHORT",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_SHORT",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_SHORT",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_SHORT",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_SHORT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M10_CHAIN_TO_BUILD",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_TO_BUILD",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_TO_BUILD",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_TO_BUILD",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_TO_BUILD",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M10_CHAIN_TO_BUILD",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:P02_ATTRACT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P02_ATTRACT",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P02_ATTRACT",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P02_ATTRACT",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P02_ATTRACT",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P02_ATTRACT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:P04_SURVIVE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P04_SURVIVE",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P04_SURVIVE",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P04_SURVIVE",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P04_SURVIVE",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P04_SURVIVE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:P07_QUICK",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P07_QUICK",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P07_QUICK",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P07_QUICK",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P07_QUICK",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P07_QUICK",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:P09_KINGDOM",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P09_KINGDOM",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P09_KINGDOM",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P09_KINGDOM",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P09_KINGDOM",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P09_KINGDOM",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:P10_POWER",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P10_POWER",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P10_POWER",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P10_POWER",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P10_POWER",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P10_POWER",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:P11_THIRTY",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P11_THIRTY",
+      "detail": "actual_asr_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P11_THIRTY",
+      "detail": "identity_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P11_THIRTY",
+      "detail": "semantic_cluster_review_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P11_THIRTY",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:P11_THIRTY",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:CTA02_ENTRY_PROOF",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:CTA02_ENTRY_PROOF",
+      "detail": "bad-cta02-entry-proof"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_ENTRY_PROOF",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_ENTRY_PROOF",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:CTA02_CLICK",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_CLICK",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_CLICK",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:CTA02_GIFT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:CTA02_GIFT",
+      "detail": "bad-cta02-benefit"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_GIFT",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_GIFT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:CTA02_CLICK_GIFT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:CTA02_CLICK_GIFT",
+      "detail": "bad-cta02-benefit"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_CLICK_GIFT",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_CLICK_GIFT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:CTA09_OFFICIAL",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA09_OFFICIAL",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA09_OFFICIAL",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:CTA09_CLICK",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA09_CLICK",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA09_CLICK",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M09_CAUSE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M09_CAUSE",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M09_CAUSE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M07_TREE_FURNACE_TEMP",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M07_TREE_FURNACE_TEMP",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:M02_TREE_RESOURCE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M02_TREE_RESOURCE",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:M02_TREE_RESOURCE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ05_FEATURES",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ05_FEATURES",
+      "detail": "opening_cast_evidence_path"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ05_FEATURES",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ03_PRODUCT_HOOK",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ03_PRODUCT_HOOK",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ03_SURVIVOR_ACTION",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ03_SURVIVOR_ACTION",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ04_QUICK_START",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ04_QUICK_START",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ04_SURVIVAL_CHAIN",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:WZ04_SURVIVAL_CHAIN",
+      "detail": "bad-c04-cold-short"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ04_SURVIVAL_CHAIN",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ05_THREE_HUNDRED",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ05_THREE_HUNDRED",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ05_PRODUCT_POPULAR",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ05_PRODUCT_POPULAR",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ06_WAIT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ06_WAIT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ07_SURVIVOR_BUILD",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ07_SURVIVOR_BUILD",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ07_RELIEF_PRODUCT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ07_RELIEF_PRODUCT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ07_JOY",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ07_JOY",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ07_JOY_QUICK",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ07_JOY_QUICK",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ08_STATS_SHORT",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ08_STATS_SHORT",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ09_TREE_FURNACE",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ09_TREE_FURNACE",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ09_TEMP_KINGDOM",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ09_TEMP_KINGDOM",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ09_ACTIONS",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ09_ACTIONS",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:WZ10_SURVIVOR_POWER",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:WZ10_SURVIVOR_POWER",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:CTA02_BENEFIT_ONLY",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:CTA02_BENEFIT_ONLY",
+      "detail": "bad-cta02-benefit"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_BENEFIT_ONLY",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_CONTENT_FINGERPRINT_REQUIRED",
+      "scope": "candidate:CTA02_CLICK_CODES",
+      "detail": "source_content_fingerprint"
+    },
+    {
+      "code": "V20_USER_INVALID_INTERVAL",
+      "scope": "candidate:CTA02_CLICK_CODES",
+      "detail": "bad-cta02-benefit"
+    },
+    {
+      "code": "V20_CURRENT_TASK_EVIDENCE_REQUIRED",
+      "scope": "candidate:CTA02_CLICK_CODES",
+      "detail": "v20_evidence_bundle_path"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-01",
+      "detail": "C04_COLD_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-01",
+      "detail": "CTA02_BENEFIT_ONLY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-01",
+      "detail": "H04_RELIEF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-01",
+      "detail": "M07_BASIC"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-01",
+      "detail": "P10_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-02",
+      "detail": "C04_COLD_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-02",
+      "detail": "CTA02_ENTRY_PROOF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-02",
+      "detail": "M10_CHAIN_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-02",
+      "detail": "WZ07_SURVIVOR_BUILD"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-03",
+      "detail": "C04_COLD_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-03",
+      "detail": "M10_CHAIN_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-03",
+      "detail": "P10_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-03",
+      "detail": "WZ09_TEMP_KINGDOM"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-04",
+      "detail": "C04_COLD_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-04",
+      "detail": "C08_ACHIEVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-04",
+      "detail": "CTA02_GIFT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-04",
+      "detail": "P07_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-04",
+      "detail": "WZ09_TREE_FURNACE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-05",
+      "detail": "C07_ACHIEVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-05",
+      "detail": "CTA09_OFFICIAL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-05",
+      "detail": "H04_RELIEF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-05",
+      "detail": "M07_BASIC"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-05",
+      "detail": "WZ07_JOY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-06",
+      "detail": "C08_ACHIEVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-06",
+      "detail": "CTA02_BENEFIT_ONLY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-06",
+      "detail": "H04_RELIEF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-06",
+      "detail": "M07_TO_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-06",
+      "detail": "P11_THIRTY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-07",
+      "detail": "H04_RELIEF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-07",
+      "detail": "M03_FURNACE_FULL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-07",
+      "detail": "WZ03_SURVIVOR_ACTION"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-07",
+      "detail": "WZ07_JOY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-08",
+      "detail": "H04_RELIEF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-08",
+      "detail": "M03_FURNACE_FULL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-08",
+      "detail": "WZ03_SURVIVOR_ACTION"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-08",
+      "detail": "WZ07_JOY_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-09",
+      "detail": "C01_SIMPLE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-09",
+      "detail": "CTA09_CLICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-09",
+      "detail": "H06_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-09",
+      "detail": "M02_TREE_RESOURCE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-09",
+      "detail": "M03_FURNACE_RESULT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-09",
+      "detail": "WZ04_QUICK_START"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-09",
+      "detail": "WZ07_SURVIVOR_BUILD"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-10",
+      "detail": "CTA02_BENEFIT_ONLY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-10",
+      "detail": "H06_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-10",
+      "detail": "M02_TREE_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-10",
+      "detail": "M03_FURNACE_RESULT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-10",
+      "detail": "WZ04_QUICK_START"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-11",
+      "detail": "CTA09_OFFICIAL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-11",
+      "detail": "H06_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-11",
+      "detail": "M06_TREE_FURNACE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-11",
+      "detail": "WZ07_JOY_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-11",
+      "detail": "WZ10_SURVIVOR_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-12",
+      "detail": "CTA02_CLICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-12",
+      "detail": "H06_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-12",
+      "detail": "WZ04_QUICK_START"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-12",
+      "detail": "WZ09_TREE_FURNACE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-12",
+      "detail": "WZ10_SURVIVOR_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-13",
+      "detail": "A09_FULL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-13",
+      "detail": "C08_ACHIEVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-13",
+      "detail": "H09_FAKE_Q"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-13",
+      "detail": "M02_TREE_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-13",
+      "detail": "WZ09_ACTIONS"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-14",
+      "detail": "A09_FULL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-14",
+      "detail": "CTA02_CLICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-14",
+      "detail": "H09_FAKE_Q"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-14",
+      "detail": "M06_TREE_FURNACE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-14",
+      "detail": "P10_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-14",
+      "detail": "WZ04_QUICK_START"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-15",
+      "detail": "CTA02_CLICK_CODES"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-15",
+      "detail": "M07_BASIC"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-15",
+      "detail": "WZ07_JOY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-15",
+      "detail": "WZ09_TEMP_KINGDOM"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-16",
+      "detail": "CTA02_GIFT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-16",
+      "detail": "M07_TO_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-16",
+      "detail": "WZ04_QUICK_START"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-16",
+      "detail": "WZ07_SURVIVOR_BUILD"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-17",
+      "detail": "CTA02_ENTRY_PROOF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-17",
+      "detail": "M07_TREE_FURNACE_TEMP"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-17",
+      "detail": "WZ07_JOY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-17",
+      "detail": "WZ07_SURVIVOR_BUILD"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-18",
+      "detail": "CTA02_CLICK_CODES"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-18",
+      "detail": "M07_TREE_FURNACE_TEMP"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-18",
+      "detail": "WZ07_JOY_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-18",
+      "detail": "WZ07_SURVIVOR_BUILD"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-19",
+      "detail": "CTA02_CLICK_CODES"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-19",
+      "detail": "M10_CHAIN_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-19",
+      "detail": "P10_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-19",
+      "detail": "WZ07_RELIEF_PRODUCT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-20",
+      "detail": "CTA02_GIFT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-20",
+      "detail": "M10_CHAIN_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-20",
+      "detail": "WZ04_QUICK_START"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-20",
+      "detail": "WZ09_TEMP_KINGDOM"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-21",
+      "detail": "CTA02_CLICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-21",
+      "detail": "M10_CHAIN_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-21",
+      "detail": "WZ07_JOY_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-21",
+      "detail": "WZ10_SURVIVOR_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-22",
+      "detail": "M02_TREE_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-22",
+      "detail": "M03_FURNACE_RESULT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-22",
+      "detail": "P04_SURVIVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-22",
+      "detail": "WZ03_PRODUCT_HOOK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-23",
+      "detail": "CTA09_CLICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-23",
+      "detail": "M07_TO_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-23",
+      "detail": "P07_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-23",
+      "detail": "P09_KINGDOM"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-23",
+      "detail": "WZ03_PRODUCT_HOOK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-24",
+      "detail": "M03_FURNACE_FULL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-24",
+      "detail": "P04_SURVIVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-24",
+      "detail": "WZ03_PRODUCT_HOOK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-24",
+      "detail": "WZ03_SURVIVOR_ACTION"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-25",
+      "detail": "M03_FURNACE_FULL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-25",
+      "detail": "WZ03_PRODUCT_HOOK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-25",
+      "detail": "WZ03_SURVIVOR_ACTION"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-25",
+      "detail": "WZ07_RELIEF_PRODUCT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-26",
+      "detail": "C02_FURNACE_CLOSED"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-26",
+      "detail": "M07_TO_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-26",
+      "detail": "WZ05_PRODUCT_POPULAR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-26",
+      "detail": "WZ09_TEMP_KINGDOM"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-27",
+      "detail": "CTA02_BENEFIT_ONLY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-27",
+      "detail": "M02_TREE_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-27",
+      "detail": "M03_FURNACE_RESULT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-27",
+      "detail": "P07_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-27",
+      "detail": "WZ05_PRODUCT_POPULAR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-28",
+      "detail": "CTA09_OFFICIAL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-28",
+      "detail": "M07_BASIC"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-28",
+      "detail": "P10_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-28",
+      "detail": "WZ05_PRODUCT_POPULAR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-28",
+      "detail": "WZ07_JOY_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-29",
+      "detail": "M03_FURNACE_FULL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-29",
+      "detail": "WZ03_SURVIVOR_ACTION"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-29",
+      "detail": "WZ05_PRODUCT_POPULAR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-29",
+      "detail": "WZ10_SURVIVOR_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-30",
+      "detail": "CTA02_CLICK_CODES"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-30",
+      "detail": "M07_TREE_FURNACE_TEMP"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-30",
+      "detail": "WZ05_THREE_HUNDRED"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-31",
+      "detail": "C02_FURNACE_CLOSED"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-31",
+      "detail": "M07_TO_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-31",
+      "detail": "P04_SURVIVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-31",
+      "detail": "WZ07_RELIEF_PRODUCT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-32",
+      "detail": "C07_ACHIEVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-32",
+      "detail": "CTA02_BENEFIT_ONLY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-32",
+      "detail": "M02_TREE_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-32",
+      "detail": "M03_FURNACE_RESULT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-32",
+      "detail": "WZ07_RELIEF_PRODUCT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-33",
+      "detail": "CTA09_OFFICIAL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-33",
+      "detail": "M02_TREE_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-33",
+      "detail": "M03_FURNACE_RESULT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-33",
+      "detail": "P07_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-33",
+      "detail": "WZ07_RELIEF_PRODUCT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-34",
+      "detail": "M03_FURNACE_FULL"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-34",
+      "detail": "WZ03_SURVIVOR_ACTION"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-34",
+      "detail": "WZ07_RELIEF_PRODUCT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-34",
+      "detail": "WZ07_SURVIVOR_BUILD"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-35",
+      "detail": "C07_ACHIEVE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-35",
+      "detail": "CTA02_CLICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-35",
+      "detail": "M07_BASIC"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-35",
+      "detail": "WZ07_JOY_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-35",
+      "detail": "WZ08_STATS_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-36",
+      "detail": "CTA02_BENEFIT_ONLY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-36",
+      "detail": "M07_TO_SURVIVOR"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-36",
+      "detail": "P07_QUICK"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-36",
+      "detail": "P10_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-36",
+      "detail": "WZ08_STATS_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-37",
+      "detail": "H04_RELIEF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-37",
+      "detail": "M10_CHAIN_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-37",
+      "detail": "WZ08_STATS_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-37",
+      "detail": "WZ10_SURVIVOR_POWER"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-38",
+      "detail": "CTA02_ENTRY_PROOF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-38",
+      "detail": "WZ08_STATS_SHORT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-38",
+      "detail": "WZ09_TEMP_KINGDOM"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-38",
+      "detail": "WZ09_TREE_FURNACE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-39",
+      "detail": "CTA02_GIFT"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-39",
+      "detail": "WZ07_JOY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-39",
+      "detail": "WZ09_TEMP_KINGDOM"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-39",
+      "detail": "WZ09_TREE_FURNACE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-40",
+      "detail": "CTA02_ENTRY_PROOF"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-40",
+      "detail": "WZ07_JOY"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-40",
+      "detail": "WZ09_TREE_FURNACE"
+    },
+    {
+      "code": "V20_DEPENDENT_PLAN_INVALIDATED",
+      "scope": "plan:WZ-40",
+      "detail": "WZ10_SURVIVOR_POWER"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "montage-control-three-suite-ff/v20.2",
+  "version": "20.2.5",
+  "created_at": "2026-09-22T14:25:05+08:00",
+  "suite_root": "C:\\Users\\dd\\Downloads\\控制三件套FF版",
+  "runtime_lock_relative_path": "runtime-lock.json",
+  "runtime_lock_sha256": "3b2ce0448433ecb3ab15879801e4a963efec993ebfa3e0b55364cdbe138bab80",
+  "components": {
+    "controller": {
+      "relative_path": "01-FFmpeg控制器/ffmpeg-montage-controller",
+      "manifest_relative_path": ".manifests/controller.json",
+      "manifest_sha256": "a249dc05028533f6fc4d1544c5be891c909be8667df5d2580354d57d98cbfd22",
+      "tree_sha256": "864951ec64d171f6fe9dd6572e7bf1a39ea7874a9e7318b1a10151259b1db84d",
+      "interface": {
+        "controller": "scripts/ffmpeg_controller.py",
+        "preflight": "preflight",
+        "finalize": "finalize",
+        "validate": "validate",
+        "runtime_paths": "scripts/runtime_paths.py",
+        "post_encode_evidence": "scripts/post_encode_evidence.py",
+        "boundary_signal_scan": "scripts/boundary_signal_scan.py",
+        "review_post_encode": "scripts/review_post_encode.py",
+        "required_render_mode": "source_frame_ranges/v1"
+      }
+    },
+    "semantic": {
+      "relative_path": "02-语义分析包/versions/semantic-analysis-training-backup-v20",
+      "manifest_relative_path": ".manifests/semantic.json",
+      "manifest_sha256": "7a1be561242f9414b6eb76d5413501ad8fb9bdde8069e38e020277e108d317c5",
+      "tree_sha256": "d41749c3df9dfc739e4a377391f68d4e359fb47721a15622681bc518e15c3e10",
+      "interface": {
+        "orchestrator": "scripts/v15_orchestrator.py",
+        "run_command": "run-continuous",
+        "gate_runtime": "scripts/v9_gate_runtime.py",
+        "frame_plan_gate": "scripts/v20_frame_plan_gate.py",
+        "opening_visual_family_gate": "scripts/v20_opening_visual_family_gate.py",
+        "portable_renderer": "scripts/portable_frame_renderer.py",
+        "frame_range_repair": "scripts/frame_range_repair.py",
+        "winky_ledger": "scripts/winky_ledger.py",
+        "fail_closed": "scripts/v20_fail_closed.py",
+        "dense_boundary_evidence": "scripts/v20_dense_boundary_evidence.py",
+        "boundary_signal_scan": "scripts/v20_boundary_signal_scan.py",
+        "independent_boundary_review": "scripts/v20_review_boundary.py",
+        "deliver": "scripts/v9_deliver.py",
+        "validate": "scripts/validate_package.py",
+        "completion_schema": "semantic-delivery-manifest/v20"
+      },
+      "package_id": "semantic-analysis-training-backup-v20",
+      "version": "20.2.5"
+    },
+    "executor": {
+      "relative_path": "03-完整执行器/montage-three-part-orchestrator-ff",
+      "manifest_relative_path": ".manifests/executor.json",
+      "manifest_sha256": "f771539a7078035ebcd89aa5c633baf9a98d0fa72dabf00bd56a84f8e00dda9a",
+      "tree_sha256": "1104ba8f202bc9b949fdce10f874b122e4641c71c4fd8059fd9ff20a895b8fd6",
+      "interface": {
+        "orchestrator": "scripts/three_suite_ff.py"
+      }
+    }
+  },
+  "mandatory_order": [
+    "complete_batch_dependency_closure",
+    "original_source_lineage",
+    "immutable_semantic_evidence",
+    "expected_first_token_alignment",
+    "internal_silence_compaction_evidence",
+    "semantic_boundary_signal_scan",
+    "separate_independent_candidate_review",
+    "frame_plan_gate",
+    "coalesce_adjacent_same_source",
+    "portable_frame_renderer",
+    "ffmpeg_controller",
+    "output_start_concat_end_evidence",
+    "fresh_output_asr",
+    "controller_boundary_signal_scan",
+    "complete_turn_post_alignment_v20_5",
+    "final_encoded_opening_visual_family_gate",
+    "separate_independent_post_review",
+    "executor_completion_gate"
+  ],
+  "render_mode": "source_frame_ranges/v1",
+  "adjacent_same_source": "coalesce_monotonic_touching_or_overlapping_frame_ranges",
+  "seconds_only_fallback": false,
+  "bypass_policy": "partial batch scope, stale invalid registry, renamed or derived rejected material without original lineage, missing current evidence, waveform-only speech start, first expected token preroll over 3 frames, undeclared or token-overlapping internal silence deletion, partial sentence, any boundary with fewer than 30 stable frames, rounded cut evidence, missing machine signal gate, missing final encoded opening-family gate, ad-hoc task-local rendering, or missing FF receipt is a hard failure",
+  "jianying_required": false
+}

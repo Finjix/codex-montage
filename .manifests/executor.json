@@ -1,0 +1,28 @@
+{
+  "schema": "three-suite-component-manifest/v20",
+  "component": "executor",
+  "root": "C:\\Users\\dd\\Downloads\\控制三件套FF版\\03-完整执行器\\montage-three-part-orchestrator-ff",
+  "file_count": 3,
+  "tree_sha256": "1104ba8f202bc9b949fdce10f874b122e4641c71c4fd8059fd9ff20a895b8fd6",
+  "required_files": [
+    "SKILL.md",
+    "scripts/three_suite_ff.py"
+  ],
+  "files": [
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "fd17a1efc9747990e200e175c03b5e81607cc8ccd60f64d78c383e84ebc68fef",
+      "size": 305
+    },
+    {
+      "path": "scripts/three_suite_ff.py",
+      "sha256": "f2477892e14de545be8c3ddcc30534f9a13a23bde9fb95ec82274673ca04fb41",
+      "size": 12765
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "d0776bcae9a8bde5e1c6a6135088b0b3ffc7c545dc6aa354a6fe70ea64f55280",
+      "size": 2178
+    }
+  ]
+}

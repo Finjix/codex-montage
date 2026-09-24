@@ -1,0 +1,40 @@
+{
+  "schema": "ff-suite-upgrade-checkpoint/v1",
+  "version": "20.2.4",
+  "created_at": "2026-09-21T11:30:00+08:00",
+  "source": "current user authorization to summarize every failure in the V20.2.1 new-40-output folder and harden all gates",
+  "decision": "pass",
+  "scope": [
+    "semantic-analysis-training-backup-v20",
+    "ffmpeg-montage-controller",
+    "montage-three-part-orchestrator-ff",
+    "portable external suite in place"
+  ],
+  "major_changes": [
+    "complete-folder regression contract",
+    "derived-source original-frame lineage",
+    "invalid-range matching across renamed intermediates",
+    "expected first-token alignment with maximum 3-frame preroll",
+    "fresh output ASR and complete-turn final QC v20.5",
+    "dependency-closed repair only",
+    "current-work-order-only duration policy",
+    "opening and position-aware route diversity",
+    "ad-hoc task-local rendering cannot authorize release"
+  ],
+  "component_tree_sha256": {
+    "controller": "d466943d002974388d8bddeb6ef9c3d02bdfd46562e6012a4ab5b1ab5b362928",
+    "semantic": "63931ec8a8b6be31dc4f001fccd0a1cb375e71c02e420584318091e279b142ed",
+    "executor": "bd8bf3ba8a68268b38e02d42efbb90a3040c6ccb88bd4df8569cc0276c98940c"
+  },
+  "validation": {
+    "semantic_package_members": 98,
+    "semantic_package_failures": 0,
+    "release_checks_passed": 15,
+    "release_checks_total": 15,
+    "suite_preflight": "pass",
+    "render_mode": "source_frame_ranges/v1",
+    "seconds_only_fallback": false
+  },
+  "external_models_called": false,
+  "opencode_called": false
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "v20-ff-deployment-entry-preflight/v1",
+  "version": "20.2.5",
+  "tested_at": "2026-09-22T14:25:00+08:00",
+  "entrypoint": "开始部署.cmd -PreflightOnly",
+  "decision": "pass",
+  "checks": {
+    "cmd_ascii_entrypoint": true,
+    "powershell_utf8_bom": true,
+    "python_3_10": true,
+    "suite_tree": true,
+    "ffmpeg": true,
+    "ffprobe": true,
+    "faster_whisper_model": true,
+    "internal_silence_compaction_gate": true,
+    "final_encoded_opening_visual_family_gate": true,
+    "no_install_side_effect_in_preflight": true
+  }
+}
